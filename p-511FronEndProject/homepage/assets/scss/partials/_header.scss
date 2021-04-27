@@ -1,0 +1,141 @@
+header {
+  background-color: $dark-cl;
+  padding: 15px 0px;
+  .logo {
+    img {
+      width: 140px;
+    }
+  }
+  .nav-wrapper {
+    .nav-main-ul {
+      li.main-ul-li {
+        position: relative;
+        margin-left: 35px;
+
+        &:hover::after {
+          width: 100%;
+        }
+        &::after {
+          position: absolute;
+          content: "";
+          border-bottom: 3px solid $main-cl;
+          width: 0;
+          left: 0px;
+          bottom: -10px;
+          transition: all 0.3s;
+        }
+        .fa-chevron-down {
+          font-size: 10px;
+          margin-left: 3px;
+        }
+        .listing-ul,
+        .pages-ul {
+          background-color: $light-cl;
+          position: absolute;
+          left: 20px;
+          top: 42px;
+          width: 200px;
+          padding: 20px;
+          border-radius: 10px;
+          li {
+            padding-top: 12px;
+            position: relative;
+            a {
+              color: $gray-cl;
+              font-weight: 400;
+            }
+            i {
+              color: $gray-cl;
+              font-size: 10px;
+              margin: 5px;
+            }
+            &:hover {
+              a,
+              i {
+                color: $main-cl;
+              }
+            }
+            ul.for-sale {
+              position: absolute;
+              top: 20px;
+              right: -220px;
+              width: 200px;
+              background-color: $light-cl;
+              border-radius: 10px;
+              padding: 20px;
+              li {
+                padding: 0;
+                a,
+                i {
+                  color: $gray-cl;
+                }
+                &:hover {
+                  a,
+                  i {
+                    color: $main-cl;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      li.active {
+        &::after {
+          position: absolute;
+          content: "";
+          border-bottom: 3px solid $main-cl;
+          width: 100%;
+          left: 0px;
+          bottom: -10px;
+          transition: all 0.3s;
+        }
+      }
+    }
+  }
+  .sign-in {
+    ul {
+      li {
+        margin-right: 10px;
+
+        a {
+          font-weight: 400px;
+          i {
+            color: $light-cl;
+            font-size: 12px;
+            margin: 8px;
+          }
+        }
+
+        &:last-child {
+          a {
+            border: 0.5px solid $gray-cl;
+            padding: 10px 30px;
+            border-radius: 5px;
+            margin-left: 30px;
+          }
+        }
+      }
+    }
+  }
+  .pop-up {
+    background-color: rgba(28, 6, 76, 0.25);
+    height: 600px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    z-index: 312;
+    .log-in {
+      padding: 30px;
+      margin: 10%;
+      ul {
+        li {
+          a {
+            color: $dark-cl;
+          }
+        }
+      }
+    }
+  }
+}

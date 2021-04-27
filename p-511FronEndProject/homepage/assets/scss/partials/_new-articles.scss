@@ -1,0 +1,44 @@
+section#news-articles {
+  padding: 50px 0px;
+  .card {
+    width: 230px;
+    box-shadow: 1px 1px 10px 0px $shadow-cl;
+    margin-right: 25px;
+    border-radius: 6px;
+    border: none;
+    .img-wrapper {
+      position: relative;
+      border-radius: 6px;
+
+      .img-layer {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        background-color: rgba(61, 61, 91, 0.2);
+        bottom: 0px;
+        padding: 20px;
+        p {
+          font-weight: 600;
+          font-size: 14px;
+          margin: 40px 0px 10px;
+          color: rgb(182, 175, 175);
+        }
+        h5 {
+          color: white;
+        }
+      }
+    }
+    .card-body {
+      padding: 20px;
+      p {
+        font-size: 14px;
+      }
+      a {
+        color: $dark-cl;
+      }
+      span {
+        color: $main-cl;
+      }
+    }
+  }
+}

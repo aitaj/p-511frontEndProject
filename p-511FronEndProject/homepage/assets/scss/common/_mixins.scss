@@ -1,0 +1,28 @@
+@mixin mq-tablet() {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+@mixin mq-small() {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+@mixin btn{
+  padding: 13px 25px;
+  color: $light-cl;
+  background-color: $main-cl;
+  border-radius: 5px;
+  transition: all 0.3s;
+  &:hover{
+    background-color: $btn-hover-cl;
+  }
+}
+@mixin badge{
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 5px;
+  color: $light-cl;
+  font-size: 14px;
+
+}

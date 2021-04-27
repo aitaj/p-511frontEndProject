@@ -1,0 +1,32 @@
+section#comments {
+  background-image: linear-gradient(
+    77deg,
+    rgba(35, 92, 71, 0.2) -36%,
+    rgba(235, 191, 127, 0.2) 111%
+  );
+ padding: 50px 0px;
+  .item {
+    width: 300px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 4px;
+    display: inline-block;
+    margin-right: 20px;
+    @include mq-small{
+        margin: 0px 10px;
+        width: 95%;
+    }
+    .img-wrapper {
+      margin-left: 20px;
+    }
+    h5 {
+      font-size: 15px;
+      margin: 10px 0 0;
+    }
+    p {
+      font-size: 14px;
+      margin: 0px;
+      font-weight: 400;
+    }
+  }
+}

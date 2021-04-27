@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+a {
+  color: $light-cl;
+  font-size: 14px;
+  font-weight: 600;
+  &:hover {
+    color: $light-cl;
+    text-decoration: none;
+  }
+}
+p {
+  color: $gray-cl;
+}
+.featured-badge {
+  @include badge;
+  background-color: $featured-cl;
+}
+.rent-badge {
+  @include badge;
+  background-color: $rent-cl;
+}
+.sale-badge {
+  @include badge;
+  background-color: $sale-cl;
+}
+.transparent-badge{
+  @include badge;
+  background-color: rgba(23, 23, 37, 0.5);
+}
+.custom-container {
+  margin: 0px 50px;
+  @include mq-small {
+    margin: 0px;
+  }
+}
+.btn-wrapper {
+  .btn-custom {
+    @include btn;
+  }
+  display: flex;
+  justify-content: flex-end;
+  @include mq-small{
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 20px;
+  }
+}

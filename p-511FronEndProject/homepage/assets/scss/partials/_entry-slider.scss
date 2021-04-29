@@ -1,0 +1,72 @@
+section#entry {
+  position: relative;
+
+  .custom-btns {
+    opacity: 0;
+cursor: pointer;
+    i {
+      color: $gray-cl;
+      background-color: white;
+      border-radius: 50%;
+      padding: 13px 17px;
+      transition: all 0.3s;
+      &:hover {
+        background-color: $main-cl;
+        color: white;
+      }
+    }
+    .customNextBtn {
+      position: absolute;
+      top: 35%;
+      right: 5%;
+      z-index: 2;
+    }
+    .customPrevBtn {
+      position: absolute;
+      top: 35%;
+      left: 5%;
+      z-index: 2;
+    }
+  }
+  &:hover {
+    .custom-btns {
+      opacity: 1;
+    }
+  }
+  .item-wrapper {
+    background-image: url(https://demo1-homeid.g5plus.net/wp-content/uploads/2020/10/single-property-43.jpg);
+    padding: 100px;
+    @include mq-tablet {
+      padding: 200px 20px 200px 150px;
+    }
+    @include mq-small {
+      padding: 100px 20px;
+    }
+
+    .item {
+      background-color: rgb(245, 245, 245);
+      padding: 30px;
+      border-radius: 5px;
+      .price {
+        b {
+          font-size: 23px;
+        }
+        span {
+          font-size: 18px;
+        }
+      }
+      .info {
+        display: inline-block;
+        margin-right: 30px;
+        i {
+          color: $main-cl;
+          margin-right: 4px;
+        }
+      }
+      .price-card {
+        padding-top: 20px;
+        border-top: 1px solid rgb(228, 227, 227);
+      }
+    }
+  }
+}

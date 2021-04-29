@@ -1,0 +1,121 @@
+footer {
+  padding: 50px 0px;
+  background-color: $dark-cl;
+  .logo {
+    width: 160px;
+    height: 30px;
+    @include mq-tablet {
+      margin-left: 33%;
+    }
+    @include mq-small {
+      margin-left: 28%;
+      margin-bottom: 20px;
+    }
+  }
+  .footer-items {
+    ul {
+      flex-wrap: wrap;
+      margin-top: 20px;
+      @include mq-tablet {
+        justify-content: center;
+      }
+    }
+    li {
+      margin-left: 30px;
+      transition: all 0.3s;
+      a {
+        transition: all 0.3s;
+        color: $gray-cl;
+        &:hover {
+          color: white;
+        }
+      }
+      @include mq-tablet {
+        width: 30%;
+        margin-left: 10px;
+      }
+      @include mq-small {
+        width: 45%;
+        &:last-child {
+          width: 100%;
+        }
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: flex-end;
+    @include mq-tablet {
+      justify-content: center;
+    }
+    ul {
+      @include mq-small {
+        justify-content: center;
+        li {
+          margin-right: 0px;
+        }
+      }
+    }
+    li {
+      margin-right: 40px;
+
+      a {
+        i {
+          padding: 20px;
+          transition: all 0.3s;
+        }
+        color: $gray-cl;
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+  .sticky-btn {
+    padding: 10px 15px;
+    background-color: $gray-cl;
+    border-radius: 2px;
+    transition: all 0.3s;
+    z-index: 999;
+    i {
+      color: white;
+    }
+    &:hover {
+      background-color: $main-cl;
+    }
+    &.active {
+      position: fixed;
+      animation-name: sticky-btn-show;
+      animation-duration: 1s;
+      right: 20px;
+      bottom: 10px;
+    }
+    &.hide {
+      animation-name: sticky-btn-hide;
+      animation-duration: 0.5s;
+      position: fixed;
+    }
+    @keyframes sticky-btn-show {
+      from {
+        right: -20px;
+        bottom: 10px;
+      }
+      to {
+        right: 20px;
+        bottom: 10px;
+      }
+    }
+    @keyframes sticky-btn-hide {
+      from {
+        right: 20px;
+        bottom: 10px;
+      }
+      to {
+        right: -20px;
+        bottom: 10px;
+      }
+    }
+  }
+}

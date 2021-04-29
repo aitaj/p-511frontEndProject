@@ -12,17 +12,21 @@ section#neighbourhoods {
     }
     @include mq-tablet {
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: 2fr 1fr 1fr;
+      grid-template-rows: 1000px 220px 220px;
     }
     .vertical {
       grid-area: 1/1/3/2;
       @include mq-tablet {
         grid-area: 1/1/2/3;
-        height: 370px;
+        height: 1000px;
         img{
             object-fit: cover;
             width: 100%;
+            height: 100%;
         }
+      }
+      @include mq-small{
+        height: 500px;
       }
     }
 

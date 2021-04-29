@@ -1,9 +1,21 @@
 section#news-articles {
   padding: 50px 0px;
+
   .card {
-    width: 230px;
     box-shadow: 1px 1px 10px 0px $shadow-cl;
-    margin-right: 25px;
+
+    @include mq-small {
+      margin: 0px 15px;
+      width: 90%;
+      .img-wrapper {
+        height: 450px;
+
+        img {
+          object-fit: cover;
+          height: 100%;
+        }
+      }
+    }
     border-radius: 6px;
     border: none;
     .img-wrapper {
@@ -14,18 +26,21 @@ section#news-articles {
         position: absolute;
         left: 0px;
         top: 0px;
-        background-color: rgba(61, 61, 91, 0.2);
+        right: 0px;
+        background-color: rgba(61, 61, 91, 0.4);
         bottom: 0px;
         padding: 20px;
         p {
           font-weight: 600;
           font-size: 14px;
-          margin: 40px 0px 10px;
-          color: rgb(182, 175, 175);
+          color: rgb(220, 206, 206);
         }
         h5 {
           color: white;
         }
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
       }
     }
     .card-body {

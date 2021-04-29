@@ -1,0 +1,14 @@
+section#testimonials {
+    padding: 0px 0px 50px;
+    border-top:1px solid whitesmoke;
+  .item {
+    width: 200px;
+    padding: 30px;
+    opacity: 0.7;
+    transition: all 0.3s;
+    &:hover {
+      color: whitesmoke;
+      opacity: 1;
+    }
+  }
+}

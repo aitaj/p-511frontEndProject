@@ -39,6 +39,9 @@ p {
   @include mq-small {
     margin: 0px;
   }
+  @include mq-tablet {
+    margin: 0px 10px;
+  }
 }
 .btn-wrapper {
   .btn-custom {

@@ -1,99 +1,161 @@
 header {
+  z-index: 333;
   background-color: $dark-cl;
   padding: 15px 0px;
+  .navbar-wrapper-all {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
   .logo {
     img {
       width: 140px;
     }
   }
-  .nav-wrapper {
-    .nav-main-ul {
-      li.main-ul-li {
-        position: relative;
-        margin-left: 35px;
+  .nav-bar-icon {
+    display: none;
+    @include mq-tablet {
+      display: block;
+      color: white;
+    }
+  }
+  .nav-main-ul {
+    li {
+      &:first-child {
+        display: none;
+      }
+    }
+    li.main-ul-li {
+      position: relative;
+      margin-left: 35px;
 
-        &:hover::after {
-          width: 100%;
-        }
-        &::after {
-          position: absolute;
-          content: "";
-          border-bottom: 3px solid $main-cl;
-          width: 0;
-          left: 0px;
-          bottom: -10px;
-          transition: all 0.3s;
-        }
-        .fa-chevron-down {
-          font-size: 10px;
-          margin-left: 3px;
-        }
-        .listing-ul,
-        .pages-ul {
-          background-color: $light-cl;
-          position: absolute;
-          left: 20px;
-          top: 42px;
-          width: 200px;
-          padding: 20px;
-          border-radius: 10px;
-          li {
-            padding-top: 12px;
-            position: relative;
-            a {
-              color: $gray-cl;
-              font-weight: 400;
-            }
+      &:hover::after {
+        width: 100%;
+      }
+      &::after {
+        position: absolute;
+        content: "";
+        border-bottom: 3px solid $main-cl;
+        width: 0;
+        left: 0px;
+        bottom: -10px;
+        transition: all 0.3s;
+      }
+      .fa-chevron-down {
+        font-size: 10px;
+        margin-left: 3px;
+      }
+      .listing-ul,
+      .pages-ul {
+        background-color: $light-cl;
+        position: absolute;
+        left: 20px;
+        top: 42px;
+        width: 200px;
+        padding: 20px;
+        border-radius: 10px;
+        li {
+          padding-top: 12px;
+          position: relative;
+          a {
+            color: $gray-cl;
+            font-weight: 400;
+          }
+          i {
+            color: $gray-cl;
+            font-size: 10px;
+            margin: 5px;
+          }
+          &:hover {
+            a,
             i {
-              color: $gray-cl;
-              font-size: 10px;
-              margin: 5px;
+              color: $main-cl;
             }
-            &:hover {
+          }
+          ul.for-sale {
+            position: absolute;
+            top: 20px;
+            right: -220px;
+            width: 200px;
+            background-color: $light-cl;
+            border-radius: 10px;
+            padding: 20px;
+            li {
+              padding: 0;
               a,
               i {
-                color: $main-cl;
+                color: $gray-cl;
               }
-            }
-            ul.for-sale {
-              position: absolute;
-              top: 20px;
-              right: -220px;
-              width: 200px;
-              background-color: $light-cl;
-              border-radius: 10px;
-              padding: 20px;
-              li {
-                padding: 0;
+              &:hover {
                 a,
                 i {
-                  color: $gray-cl;
-                }
-                &:hover {
-                  a,
-                  i {
-                    color: $main-cl;
-                  }
+                  color: $main-cl;
                 }
               }
             }
           }
         }
       }
-      li.active {
-        &::after {
-          position: absolute;
-          content: "";
-          border-bottom: 3px solid $main-cl;
-          width: 100%;
-          left: 0px;
-          bottom: -10px;
-          transition: all 0.3s;
+    }
+    li.active {
+      &::after {
+        position: absolute;
+        content: "";
+        border-bottom: 3px solid $main-cl;
+        width: 100%;
+        left: 0px;
+        bottom: -10px;
+        transition: all 0.3s;
+      }
+    }
+  }
+  .nav-wrapper {
+    @include mq-tablet {
+      display: none;
+    }
+    &.active {
+      ul {
+        width: 300px;
+        flex-direction: column;
+        position: absolute;
+        left: 0px;
+        top: 57px;
+        background-color: black;
+        z-index: 30;
+        li {
+          padding: 20px 0px;
+          margin-left: 25px;
+          &::after {
+            width: 0px;
+          }
+          a {
+            color: rgb(194, 190, 190);
+            text-transform: uppercase;
+            font-weight: 600;
+          }
+          &:first-child {
+            display: block;
+            padding: 23px;
+            margin: 0px;
+            input {
+              background-color: rgb(25, 24, 24);
+              width: 100%;
+              height: 40px;
+              border: none;
+              &::placeholder {
+                padding-left: 20px;
+              }
+            }
+            background-color: rgb(68, 65, 65);
+          }
         }
       }
     }
   }
   .sign-in {
+    @include mq-tablet {
+      display: none;
+    }
     ul {
       li {
         margin-right: 10px;

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>About</title>
+  </head>
+  <body>
+    <header>
+      <div class="pop-up d-none">
+        <div class="row">
+          <div class="col-md-6 offset-md-3">
+            <div class="log-in bg-light d-flex justify-content-between">
+              <ul class="d-flex">
+                <li><a href="#">Log In</a></li>
+                <li><a href="#">Register</a></li>
+              </ul>
+              <i class="fas fa-times"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="navbar-wrapper-all">
+            <div class="logo">
+              <img
+                class="img-fluid"
+                src="https://demo1-homeid.g5plus.net/wp-content/uploads/2021/03/demo-logo.png"
+                alt=""
+              />
+            </div>
+
+            <div class="nav-wrapper">
+              <ul class="nav-main-ul">
+                <li><input type="text" placeholder="Type and hit enter" /></li>
+                <li class="active main-ul-li"><a href="#">Home</a></li>
+                <li class="main-ul-li">
+                  <a href="#"> Listing <i class="fas fa-chevron-down"></i> </a>
+                  <ul class="listing-ul d-none">
+                    <li class="listing-ul-li d-flex justify-content-between">
+                      <a href="#">Property Status</a
+                      ><i class="fas fa-chevron-right"></i>
+                      <ul class="for-sale d-none">
+                        <li><a href="#">For Sale</a></li>
+                        <li><a href="#">For Sale</a></li>
+                        <li><a href="#">For Sale</a></li>
+                      </ul>
+                    </li>
+                    <li class="listing-ul-li d-flex justify-content-between">
+                      <a href="#">Property Type</a>
+                      <i class="fas fa-chevron-right"></i>
+                      <ul class="for-sale d-none">
+                        <li><a href="#">For Sale</a></li>
+                        <li><a href="#">For Sale</a></li>
+                        <li><a href="#">For Sale</a></li>
+                      </ul>
+                    </li>
+                    <li class="listing-ul-li d-flex justify-content-between">
+                      <a href="#">Property City</a>
+                      <i class="fas fa-chevron-right"></i>
+                      <ul class="for-sale d-none">
+                        <li><a href="#">For Sale</a></li>
+                        <li><a href="#">For Sale</a></li>
+                        <li><a href="#">For Sale</a></li>
+                      </ul>
+                    </li>
+                    <li class="listing-ul-li d-flex justify-content-between">
+                      <a href="#">Property State</a
+                      ><i class="fas fa-chevron-right"></i>
+                      <ul class="for-sale d-none">
+                        <li><a href="#">For Sale</a></li>
+                        <li><a href="#">For Sale</a></li>
+                        <li><a href="#">For Sale</a></li>
+                      </ul>
+                    </li>
+                    <li class="listing-ul-li d-flex justify-content-between">
+                      <a href="#">Property Feature</a>
+                      <i class="fas fa-chevron-right"></i>
+                      <ul class="for-sale d-none">
+                        <li><a href="#">For Sale</a></li>
+                        <li><a href="#">For Sale</a></li>
+                        <li><a href="#">For Sale</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="main-ul-li"><a href="#">Agency</a></li>
+                <li class="main-ul-li"><a href="#"> Agent</a></li>
+                <li class="main-ul-li"><a href="#"> Blog</a></li>
+                <li class="main-ul-li">
+                  <a href="#"> Pages<i class="fas fa-chevron-down"></i></a>
+                </li>
+              </ul>
+            </div>
+            <div class="nav-bar-icon">
+              <i class="fas fa-bars"></i>
+            </div>
+            <div class="sign-in">
+              <ul class="d-flex">
+                <li>
+                  <a href="#"> <i class="fas fa-user"></i>SIGN IN</a>
+                </li>
+                <li>
+                  <a href="#">Add Listing<i class="fas fa-house-user"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section id="agents">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="header-wrapper text-center pb-3">
+                <h5>Home/Agents</h5>
+                <h3>Agents</h3>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-4">
+
+            <div class="col-lg-4">
+              <div class="search-register-ad">
+                <div class="search">
+                  <h5>Search</h5>
+                  <select class="agency-dropdown js-example-basic-single">
+                    <option>All Agency</option>
+                    <option>Construction</option>
+                    <option>Eco House Company</option>
+                    <option>Royal Caribbean</option>
+                  </select>
+                  <div class="input">
+                    <input type="text" placeholder="Enter Keyword..." /><i
+                      class="fas fa-search"
+                    ></i>
+                  </div>
+                  <a href="#" class="btn-custom">Search</a>
+                </div>
+                <div class="register text-center">
+                  <p>Want to become an</p>
+                  <h5>Estate Agent?</h5>
+                  <div class="img-wrapper">
+                    <img
+                      src="https://demo1-homeid.g5plus.net/wp-content/uploads/2021/03/Asset.png"
+                      alt=""
+                      class="img-fluid"
+                    />
+                  </div>
+                  <a href="#">Register</a>
+                </div>
+                <div class="featured-properties">
+                  <h5 class="mb-3">Featured Properties</h5>
+
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div
+                        class="item-slider owl-carousel owl-theme owl-loaded"
+                      >
+                        <div class="item">
+                          <img
+                            src="https://demo1-homeid.g5plus.net/wp-content/uploads/2020/10/single-property-05.jpg"
+                            alt=""
+                            class="img-fluid"
+                          />
+                          <div class="item-layer">
+                            <div class="badge-wrapper">
+                              <span class="featured-badge">FEATURED</span>
+                              <span class="sale-badge">FOR SALE</span>
+                            </div>
+
+                            <div class="info-wrapper">
+                              <h5>Luxury Villa</h5>
+                              <p>$550/month</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item">
+                          <img
+                            src="https://demo1-homeid.g5plus.net/wp-content/uploads/2020/10/single-property-05.jpg"
+                            alt=""
+                            class="img-fluid"
+                          />
+                          <div class="item-layer">
+                            <div class="badge-wrapper">
+                              <span class="featured-badge">FEATURED</span>
+                              <span class="sale-badge">FOR SALE</span>
+                            </div>
+
+                            <div class="info-wrapper">
+                              <h5>Luxury Villa</h5>
+                              <p>$550/month</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item">
+                          <img
+                            src="https://demo1-homeid.g5plus.net/wp-content/uploads/2020/10/single-property-05.jpg"
+                            alt=""
+                            class="img-fluid"
+                          />
+                          <div class="item-layer">
+                            <div class="badge-wrapper">
+                              <span class="featured-badge">FEATURED</span>
+                              <span class="sale-badge">FOR SALE</span>
+                            </div>
+
+                            <div class="info-wrapper">
+                              <h5>Luxury Villa</h5>
+                              <p>$550/month</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item">
+                          <img
+                            src="https://demo1-homeid.g5plus.net/wp-content/uploads/2020/10/single-property-05.jpg"
+                            alt=""
+                            class="img-fluid"
+                          />
+                          <div class="item-layer">
+                            <div class="badge-wrapper">
+                              <span class="featured-badge">FEATURED</span>
+                              <span class="sale-badge">FOR SALE</span>
+                            </div>
+
+                            <div class="info-wrapper">
+                              <h5>Luxury Villa</h5>
+                              <p>$550/month</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item">
+                          <img
+                            src="https://demo1-homeid.g5plus.net/wp-content/uploads/2020/10/single-property-05.jpg"
+                            alt=""
+                            class="img-fluid"
+                          />
+                          <div class="item-layer">
+                            <div class="badge-wrapper">
+                              <span class="featured-badge">FEATURED</span>
+                              <span class="sale-badge">FOR SALE</span>
+                            </div>
+
+                            <div class="info-wrapper">
+                              <h5>Luxury Villa</h5>
+                              <p>$550/month</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item">
+                          <img
+                            src="https://demo1-homeid.g5plus.net/wp-content/uploads/2020/10/single-property-05.jpg"
+                            alt=""
+                            class="img-fluid"
+                          />
+                          <div class="item-layer">
+                            <div class="badge-wrapper">
+                              <span class="featured-badge">FEATURED</span>
+                              <span class="sale-badge">FOR SALE</span>
+                            </div>
+
+                            <div class="info-wrapper">
+                              <h5>Luxury Villa</h5>
+                              <p>$550/month</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="latest-posts">
+                  <h4>Latest Posts</h4>
+                  <div class="item">
+                    <div class="row">
+                      <div class="col-4">
+                        <div class="img-wrapper img-fluid">
+                          <img
+                            src="https://demo1-homeid.g5plus.net/wp-content/uploads/2020/07/blog-06-100x80.jpg"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <div class="col-8">
+                        <h5>Modern apartment adjacent</h5>
+                        <p>July 24,2020</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="row">
+                      <div class="col-4">
+                        <div class="img-wrapper img-fluid">
+                          <img
+                            src="https://demo1-homeid.g5plus.net/wp-content/uploads/2020/07/blog-03-100x80.jpg"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <div class="col-8">
+                        <h5>Modern apartment adjacent</h5>
+                        <p>July 24,2020</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="row">
+                      <div class="col-4">
+                        <div class="img-wrapper img-fluid">
+                          <img
+                            src="https://demo1-homeid.g5plus.net/wp-content/uploads/2020/07/blog-12-100x80.jpg"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <div class="col-8">
+                        <h5>Modern apartment adjacent</h5>
+                        <p>July 24,2020</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="showing-names-count">
+                    <p>Showing</p>
+                    <span>1-6</span>
+                    <p>of</p>
+                    <span>16</span>
+                    <p>result</p>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="sorting-names">
+                    <select
+                      class="sorting-names-dropdown js-example-basic-single"
+                    >
+                      <option>Name (A to Z)</option>
+                      <option>Construction</option>
+                      <option>Eco House Company</option>
+                      <option>Royal Caribbean</option>
+                    </select>
+                    <div class="style-changing">
+                      <span><i class="fas fa-bars"></i></span>
+                      <span><i class="fas fa-th-large"></i></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="agent-cards"></div>
+            </div>
+            <div class="col-lg-5 offset-md-7">
+              <div class="paginater">
+                <span><i class="fas fa-chevron-left"></i></span>
+                <span>1</span>
+                <span class="active">2</span>
+                <span>3</span>
+                <span><i class="fas fa-chevron-right"></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <a class="sticky-btn"><i class="fas fa-chevron-up"></i></a>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-12">
+            <div class="logo">
+              <img
+                class="img-fluid"
+                src="https://demo1-homeid.g5plus.net/wp-content/uploads/2021/03/demo-logo.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12">
+            <div class="social-links d-flex">
+              <ul class="d-flex" style="font-size: 30px">
+                <li>
+                  <a href="#"><i class="fab fa-facebook-f fa-lg"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-instagram fa-lg"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="footer-items text-center">
+              <div class="row">
+                <div class="col-lg-8">
+                  <ul class="d-flex">
+                    <li><a href="#">TERMS OF USE</a></li>
+                    <li><a href="#">PRIVACY POLICY</a></li>
+                    <li><a href="#">CONTACT SUPPORT</a></li>
+                    <li><a href="#">CAREERS</a></li>
+                    <li><a href="#">FAGS</a></li>
+                  </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-12 mt-3">
+                  <p>&copy; 2021 homeID. All Rights Reserved</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

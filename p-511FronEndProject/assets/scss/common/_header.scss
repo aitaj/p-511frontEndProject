@@ -20,6 +20,10 @@ header {
     }
   }
   .nav-main-ul {
+    display: flex;
+    &::after {
+      opacity: 0;
+    }
     li {
       &:first-child {
         display: none;
@@ -111,45 +115,68 @@ header {
   }
   .nav-wrapper {
     @include mq-tablet {
-      display: none;
-    }
-    &.active {
       ul {
-        width: 300px;
-        flex-direction: column;
-        position: absolute;
-        left: 0px;
-        top: 57px;
-        background-color: black;
-        z-index: 30;
-        li {
-          padding: 20px 0px;
-          margin-left: 25px;
-          &::after {
-            width: 0px;
-          }
-          a {
-            color: rgb(194, 190, 190);
-            text-transform: uppercase;
-            font-weight: 600;
-          }
-          &:first-child {
-            display: block;
-            padding: 23px;
-            margin: 0px;
-            input {
-              background-color: rgb(25, 24, 24);
-              width: 100%;
-              height: 40px;
-              border: none;
-              &::placeholder {
-                padding-left: 20px;
-              }
+        display: none;
+        transform: translateX(0%);
+        transition: all 1s;
+      }
+      &.active {
+        ul {
+          display: flex;
+          transform: translateX(-100%);
+          transition: all 1s;
+          width: 300px;
+          flex-direction: column;
+          position: absolute;
+          left: 0px;
+          top: 0px;
+          background-color: black;
+          z-index: 30;
+          animation-name: smooth-nav;
+          animation-duration: 1s;
+          li {
+            padding: 20px 0px;
+            margin-left: 25px;
+            &::after {
+              width: 0px;
             }
-            background-color: rgb(68, 65, 65);
+            a {
+              color: rgb(194, 190, 190);
+              text-transform: uppercase;
+              font-weight: 600;
+            }
+            &:first-child {
+              display: block;
+              padding: 23px;
+              margin: 0px;
+              input {
+                background-color: rgb(25, 24, 24);
+                width: 100%;
+                height: 40px;
+                border: none;
+                &::placeholder {
+                  padding-left: 20px;
+                }
+              }
+              background-color: rgb(68, 65, 65);
+            }
           }
         }
       }
+      // &.active::after {
+      //   content: "";
+      //   left: 0px;
+      //   background-color: rgb(15, 15, 44);
+      //   position: absolute;
+      //   width: 100%;
+      //   top: 40px;
+      //   height: 1000px;
+      //   opacity: 0.4;
+      //   animation-name: smooth-opacity;
+      //   animation-duration: 2s;
+      //   z-index: 5;
+      // }
+  
     }
   }
   .sign-in {
@@ -199,5 +226,32 @@ header {
         }
       }
     }
+  }
+}
+@keyframes smooth-opacity {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+@keyframes smooth-nav{
+  0%{
+    transform: translateX(-200%);
+  }
+  100%{
+    transform: translateX(-100%);
+  }
+}
+@keyframes smooth-main{
+  0%{
+    transform: translateX(0px);
+  }
+  100%{
+    transform: translateX(300px);
   }
 }

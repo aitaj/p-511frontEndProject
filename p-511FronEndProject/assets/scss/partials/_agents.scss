@@ -1,0 +1,245 @@
+section#agents {
+  padding: 50px 0px;
+  .header-wrapper{
+      border-bottom: 1px solid rgb(240, 234, 234);
+      h5{
+          color: gray;
+          font-size: 20px;
+          font-weight: 400;
+      }
+      h3{
+          font-weight: 600;
+      }
+  }
+  .search-register-ad {
+    @include mq-tablet {
+      display: none;
+    }
+    .search {
+      background-color: white;
+      padding: 40px;
+      border-radius: 3px;
+      select,
+      input {
+        width: 100%;
+        border: none;
+        background-color: whitesmoke;
+        color: $gray-cl;
+        padding: 15px;
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      .input {
+        position: relative;
+        i {
+          position: absolute;
+          color: gray;
+          right: 20px;
+          top: 20px;
+        }
+      }
+      a {
+        @include btn;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+      }
+    }
+    .register {
+      margin-top: 20px;
+      background-color: white;
+      padding: 40px;
+      border-radius: 3px;
+      p {
+        font-size: 14px;
+        color: $dark-cl;
+      }
+      .img-wrapper {
+        margin: 50px;
+      }
+      a {
+        @include btn;
+        padding-top: 8px;
+      }
+    }
+
+    .featured-properties {
+      padding: 40px 20px;
+      background-color: white;
+      margin-top: 20px;
+      img {
+        border-radius: 4px;
+      }
+      .item {
+        position: relative;
+
+        .item-layer {
+          position: absolute;
+          display: flex;
+          flex-direction: column;
+          top: 0px;
+          left: 0px;
+          justify-content: space-between;
+          background-color: rgba(52, 52, 103, 0.3);
+          bottom: 0px;
+          right: 0px;
+          color: white;
+          padding: 30px;
+          border-radius: 4px;
+          p {
+            color: white;
+          }
+        }
+      }
+    }
+    .latest-posts {
+      margin-top: 20px;
+      border-radius: 4px;
+      background-color: white;
+      h4 {
+        padding: 30px 20px 0px;
+      }
+      .item {
+        border-bottom: 1px solid whitesmoke;
+        background-color: white;
+        padding: 20px;
+
+        .img-wrapper {
+          margin-right: 15px;
+          border-radius: 4px;
+          position: relative;
+          width: 100%;
+          img {
+            max-width: 100%;
+          }
+
+          &:hover::after {
+            position: absolute;
+            content: "";
+            right: 0px;
+            top: 0px;
+            left: 0px;
+            bottom: 0px;
+            background-color: rgba(34, 34, 76, 0.3);
+            transition: opacity 0.3s;
+            border-radius: 4px;
+          }
+          img {
+            border-radius: 6px;
+          }
+        }
+
+        h5 {
+          font-size: 14px;
+          line-height: 20px;
+        }
+        p {
+          font-weight: 600;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .agent-cards {
+    display: flex;
+    flex-wrap: wrap;
+    .custom-card {
+      background-color: white;
+      width: 45%;
+      padding: 30px;
+      margin: 20px 5px;
+      border-radius: 4px;
+      @include mq-tablet {
+        width: 100%;
+      }
+      .custom-card-header {
+        border-bottom: 1px solid rgb(187, 183, 183);
+        padding-bottom: 20px;
+        h5,
+        p {
+          font-size: 14px;
+        }
+        .img-wrapper {
+          img {
+            max-width: 100%;
+            border-radius: 50%;
+            width: 130px;
+            height: 130px;
+            object-fit: cover;
+          }
+        }
+        .star {
+          color: orange;
+          font-size: 14px;
+        }
+      }
+      .custom-card-body {
+        padding-top: 20px;
+        p {
+          display: inline-block;
+          margin-right: 50px;
+          font-size: 12px;
+        }
+        span {
+          font-size: 12px;
+        }
+        .social {
+          span {
+            i {
+              display: inline-block;
+              color: rgb(193, 185, 185);
+              transition: all 0.3s;
+              padding: 5px 7px;
+              border: 1px solid rgb(218, 213, 213);
+              border-radius: 3px;
+              font-size: 13px;
+              &:hover {
+                background-color: $main-cl;
+                color: rgb(218, 213, 213);
+              }
+            }
+            .fa-twitter {
+              padding: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .showing-names-count {
+    p {
+      display: inline-block;
+    }
+    span {
+      color: $main-cl;
+    }
+  }
+  .sorting-names {
+    .style-changing {
+      display: inline-block;
+      @include mq-tablet {
+        display: none;
+      }
+      span {
+        color: $gray-cl;
+        margin-left: 5px;
+      }
+    }
+  }
+  .paginater {
+    span {
+      padding: 7px 12px;
+      border-radius: 50%;
+      &.active {
+        background-color: $main-cl;
+        color: white;
+      }
+    }
+  }
+}
+
+body {
+  background-color: rgb(245, 242, 235);
+}

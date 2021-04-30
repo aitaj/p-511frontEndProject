@@ -242,10 +242,7 @@ btnFixed.onclick = function (e) {
 };
 ///about page started
 
-
-
-
- //agent section api
+//agent section api
 
 const url = "https://json-fake-api.herokuapp.com/agents";
 
@@ -311,16 +308,17 @@ async function getAgents() {
 
 getAgents();
 
-
 //dropdowns
-$(document).ready(function() {
-  $('.agency-dropdown').select2({
+$(document).ready(function () {
+  $(".agency-dropdown").select2({
     width: `${100}%`,
-    
   });
-  $('.sorting-names-dropdown').select2({
+  $(".sorting-names-dropdown").select2({
     width: `${70}%`,
-    
   });
-  
+});
+
+// #video-pop-up section
+$(document).ready(function () {
+  $("#video-pop-up .play-btn").fancybox({});
 });

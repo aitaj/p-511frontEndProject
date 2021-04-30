@@ -1,0 +1,23 @@
+section#services {
+  background-color: $milky-bg-cl;
+  padding: 80px 0px;
+  p {
+    font-size: 14px;
+  }
+  .item {
+    width: 100%;
+    padding: 40px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 1px 8px 20px 7px $shadow-cl;
+    .img-wrapper {
+      width: 90px;
+      height: 90px;
+      margin: 0 auto;
+    }
+    h5 {
+      margin: 15px 0px;
+      font-size: 17px;
+    }
+  }
+}

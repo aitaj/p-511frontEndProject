@@ -1,15 +1,16 @@
 section#agents {
   padding: 50px 0px;
-  .header-wrapper{
-      border-bottom: 1px solid rgb(240, 234, 234);
-      h5{
-          color: gray;
-          font-size: 20px;
-          font-weight: 400;
-      }
-      h3{
-          font-weight: 600;
-      }
+  background-color: $milky-bg-cl;
+  .header-wrapper {
+    border-bottom: 1px solid rgb(240, 234, 234);
+    h5 {
+      color: gray;
+      font-size: 20px;
+      font-weight: 400;
+    }
+    h3 {
+      font-weight: 600;
+    }
   }
   .search-register-ad {
     @include mq-tablet {
@@ -103,7 +104,7 @@ section#agents {
       .item {
         border-bottom: 1px solid whitesmoke;
         background-color: white;
-        padding: 20px;
+        padding: 20px 25px;
 
         .img-wrapper {
           margin-right: 15px;
@@ -113,14 +114,16 @@ section#agents {
           img {
             max-width: 100%;
           }
-
-          &:hover::after {
+          &::after {
             position: absolute;
             content: "";
             right: 0px;
             top: 0px;
             left: 0px;
             bottom: 0px;
+            transition: all 0.3s;
+          }
+          &:hover::after {
             background-color: rgba(34, 34, 76, 0.3);
             transition: opacity 0.3s;
             border-radius: 4px;
@@ -135,7 +138,7 @@ section#agents {
           line-height: 20px;
         }
         p {
-          font-weight: 600;
+          font-weight: 500;
           font-size: 14px;
         }
       }
@@ -225,16 +228,6 @@ section#agents {
       span {
         color: $gray-cl;
         margin-left: 5px;
-      }
-    }
-  }
-  .paginater {
-    span {
-      padding: 7px 12px;
-      border-radius: 50%;
-      &.active {
-        background-color: $main-cl;
-        color: white;
       }
     }
   }

@@ -1,0 +1,229 @@
+section#blogs {
+  padding: 100px 0px;
+  background-color: $milky-bg-cl;
+  position: relative;
+  .header-wrapper {
+    h5 {
+      font-size: 15px;
+      color: $gray-cl;
+    }
+    h3 {
+      font-weight: 500;
+      margin: 10px 0px;
+    }
+  }
+  .item {
+    padding: 0px 0px 30px;
+
+    .info-wrapper {
+      padding: 20px 0px;
+      a {
+        color: $gray-cl;
+        &:hover {
+          color: $main-cl;
+        }
+      }
+      .view-count,
+      .comment-count {
+        margin-right: 2px;
+      }
+      li {
+        margin-left: 6px;
+        width: 23%;
+        @include mq-small {
+          width: 45%;
+        }
+      }
+      span {
+        margin-right: 3px;
+        margin-left: 3px;
+        color: $gray-cl;
+        img {
+          border-radius: 50%;
+        }
+      }
+
+      h3 {
+        margin: 20px 0px;
+        a {
+          font-weight: 500 !important;
+          font-size: 28px;
+          transition: all 0.3s;
+          color: $dark-cl;
+          @include mq-small {
+            font-size: 32px;
+          }
+          &:hover {
+            color: $main-cl;
+          }
+        }
+      }
+    }
+
+    .img-wrapper {
+      margin: 0px;
+      border-radius: 4px;
+      position: relative;
+      img {
+        border-radius: 4px;
+      }
+      &:after {
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        top: 0px;
+        content: "";
+        transition: all 0.3s;
+        border-radius: 4px;
+      }
+      &:hover:after {
+        background-color: rgba(21, 10, 39, 0.3);
+      }
+    }
+    .info {
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-wrapper {
+      justify-content: flex-start;
+      a {
+        color: $dark-cl;
+        padding: 12px 25px;
+        border: 1px solid $shadow-cl;
+        border-radius: 4px;
+        transition: all 0.3s;
+        &:hover {
+          background-color: $dark-cl;
+          color: white;
+        }
+      }
+      i {
+        margin-left: 10px;
+        color: $main-cl;
+      }
+    }
+  }
+  p {
+    line-height: 24px;
+  }
+
+  .search {
+    background-color: white;
+    padding: 40px;
+    border-radius: 3px;
+    border: 1px solid $shadow-cl;
+    input {
+      width: 100%;
+      border: none;
+      background-color: whitesmoke;
+      color: $gray-cl;
+      padding: 15px;
+      font-weight: 500;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    .input {
+      position: relative;
+      i {
+        position: absolute;
+        color: gray;
+        right: 20px;
+        top: 20px;
+      }
+    }
+  }
+  .categories {
+    margin-top: 20px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 4px;
+    border: 1px solid $shadow-cl;
+    ul {
+      margin-left: 2px;
+      margin-top: 10px;
+      li {
+        margin-bottom: 10px;
+        a {
+          color: $gray-cl;
+          font-weight: 400;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  .latest-posts {
+    margin-top: 20px;
+    border-radius: 4px;
+    background-color: white;
+    border: 1px solid $shadow-cl;
+    h4 {
+      padding: 30px 30px 0px;
+      font-size: 16px;
+    }
+    .item {
+      border-bottom: 1px solid whitesmoke;
+      background-color: white;
+      padding: 10px 25px;
+
+      .img-wrapper {
+        margin-right: 10px;
+        border-radius: 4px;
+        position: relative;
+        width: 100%;
+        img {
+          max-width: 100%;
+        }
+        &::after {
+          position: absolute;
+          content: "";
+          right: 0px;
+          top: 0px;
+          left: 0px;
+          bottom: 0px;
+          transition: all 0.3s;
+        }
+        &:hover::after {
+          background-color: rgba(34, 34, 76, 0.3);
+          transition: opacity 0.3s;
+          border-radius: 4px;
+        }
+        img {
+          border-radius: 6px;
+        }
+      }
+
+      h5 {
+        font-size: 14px;
+        line-height: 20px;
+      }
+      p {
+        font-weight: 500;
+        font-size: 14px;
+      }
+    }
+  }
+  .popular {
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 4px;
+    padding: 25px;
+    border: 1px solid $shadow-cl;
+    li {
+      margin: 10px 2px;
+      a {
+        color: $gray-cl;
+        background-color: whitesmoke;
+        padding: 8px 25px;
+        border-radius: 4px;
+      }
+    }
+  }
+  .side-info {
+    @include mq-tablet {
+      display: none;
+    }
+    
+  }
+}

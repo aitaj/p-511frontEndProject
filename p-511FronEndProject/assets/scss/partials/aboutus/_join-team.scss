@@ -1,0 +1,51 @@
+section#join-team {
+  background-color: $dark-cl;
+  padding: 100px 0px;
+  margin: 0px 0px -230px;
+  @include mq-tablet {
+    padding:270px 0px 30px;
+    margin: 0px;
+    div[class^="col-"]{
+      padding-right: 0px;
+      padding-left: 10px;
+    }
+  }
+  p,
+  h3 {
+    color: white;
+    margin: 20px 0px;
+  }
+  .img-wrapper {
+    margin: 20px 0px;
+    border-radius: 4px;
+    position: relative;
+    @include mq-tablet{
+      margin: 5px 0px;
+  
+
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      // background-color: rgba(45, 34, 69, 0.2);
+      transition: all 0.3s;
+    }
+    &:hover::after {
+      background-color: rgba(45, 34, 69, 0.2);
+
+    }
+    img {
+      max-width: 100%;
+      border-radius: 4px;
+
+    }
+  }
+  .btn-custom {
+    @include btn;
+    margin: 20px;
+  }
+}

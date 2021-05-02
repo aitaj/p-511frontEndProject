@@ -1,0 +1,29 @@
+section#map {
+  position: relative;
+
+  .info {
+    position: absolute;
+    top: 200px;
+    background-color: white;
+    padding:40px 30px 70px;
+    border-radius: 4px;
+    width: 350px;
+    margin-left: 100px;
+
+    box-shadow: 2px 4px 23px 2px $shadow-cl;
+    @include mq-tablet {
+      box-shadow: none;
+      top: 600px;
+      width: 100%;
+      margin-left: 0px;
+    }
+  }
+  .map-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    iframe {
+      width: 100%;
+    }
+  }
+}

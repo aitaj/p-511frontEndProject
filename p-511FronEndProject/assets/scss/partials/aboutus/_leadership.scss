@@ -1,0 +1,126 @@
+section#leadership {
+  padding: 100px 0px;
+  .item {
+    margin-top: 20px;
+    &.active {
+      .img-wrapper:after {
+        opacity: 0.5;
+      }
+      .social {
+        visibility: visible;
+      }
+      .facebook,
+      .twitter,
+      .instagram,
+      .linkedin {
+        transition-duration: 0.9s;
+        z-index: 9;
+        transform: translateY(-55px);
+        animation-name: social-opacity-up;
+        animation-duration: 1.9s;
+      }
+      .facebook {
+        transition-delay: 0.3s;
+      }
+      .twitter {
+        transition-delay: 0.4s;
+      }
+      .linkedin {
+        transition-delay: 0.5s;
+      }
+      .instagram {
+        transition-delay: 0.6s;
+      }
+    }
+    &.hide {
+      .facebook,
+      .twitter,
+      .instagram,
+      .linkedin {
+        transition-duration: 0.9s;
+        // z-index: 9;
+        transform: translateY(5px);
+        animation-name: social-opacity-down;
+        animation-duration: 1.6s;
+      }
+    
+      .facebook {
+        transition-delay: 0.3s;
+      }
+      .twitter {
+        transition-delay: 0.4s;
+      }
+      .linkedin {
+        transition-delay: 0.5s;
+      }
+      .instagram {
+        transition-delay: 0.6s;
+      }
+    }
+
+    .img-wrapper {
+      width: 100%;
+      border-radius: 4px;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: rgb(60, 60, 98);
+        bottom: 0px;
+        right: 0px;
+        transition: all 0.3s;
+        content: "";
+        opacity: 0;
+      }
+
+      img {
+        border-radius: 4px;
+      }
+    }
+    .social {
+      visibility: hidden;
+      justify-content: center;
+      div {
+        margin: 5px;
+      }
+    }
+    a {
+      i {
+        display: inline-block;
+        color: rgb(193, 185, 185);
+        transition: all 0.3s;
+        padding: 7px 10px;
+        border: 1px solid rgb(218, 213, 213);
+        border-radius: 5px;
+        font-size: 13px;
+        background-color: white;
+        &:hover {
+          background-color: $main-cl;
+          color: rgb(218, 213, 213);
+        }
+      }
+      .fa-twitter {
+        padding: 7px;
+      }
+    }
+  }
+}
+@keyframes social-opacity-down {
+  0% {
+    opacity: 1;
+  }
+ 
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes social-opacity-up {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

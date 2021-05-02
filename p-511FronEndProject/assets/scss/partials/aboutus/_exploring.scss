@@ -1,0 +1,30 @@
+section#exploring {
+  background-color: $milky-bg-cl;
+  padding: 200px 0px 100px;
+  @include mq-tablet{
+      padding: 70px 0px;
+  }
+  .item {
+    background-color: white;
+    text-align: center;
+    padding: 20px 0px;
+    border-radius: 4px;
+    transition: all 0.3s;
+    margin:15px 0px ;
+    &:hover {
+      box-shadow: 2px 4px 23px 2px $shadow-cl;
+    }
+    h5 {
+      font-size: 15px;
+      margin-top: 20px;
+    }
+    .img-wrapper {
+      margin: 0% 43%;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+

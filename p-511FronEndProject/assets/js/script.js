@@ -212,7 +212,7 @@ $(document).ready(function () {
   });
 });
 
-//fixed-btn
+//fixed-btn common
 
 let btnFixed = document.querySelector(".sticky-btn");
 
@@ -240,7 +240,6 @@ btnFixed.onclick = function (e) {
   e.preventDefault();
   scrollToTop();
 };
-///about page started
 
 //agent section api
 
@@ -308,17 +307,44 @@ async function getAgents() {
 
 getAgents();
 
-//dropdowns
 $(document).ready(function () {
+  //agents section
+
+  //dropdowns
   $(".agency-dropdown").select2({
     width: `${100}%`,
   });
   $(".sorting-names-dropdown").select2({
     width: `${70}%`,
   });
+
+  ///about page started
+
+  // #video-pop-up section
+  $("#video-pop-up .play-btn").fancybox({});
+
+// #about us slide images
+
+
+  $('[data-fancybox="images"]').fancybox({
+    buttons: ["slideShow", "share", "zoom", "fullScreen", "close"],
+    thumbs: {
+      autoStart: false,
+    },
+  });
+});
+//about us page started
+
+let leaders = document.querySelectorAll("#leadership .item");
+leaders.forEach((item) => {
+  item.addEventListener("mouseenter", function (e) {
+    this.classList.add("active");
+    this.classList.remove("hide");
+    console.log("test");
+  });
+  item.addEventListener("mouseleave", function (e) {
+    this.classList.remove("active");
+    this.classList.add("hide");
+  });
 });
 
-// #video-pop-up section
-$(document).ready(function () {
-  $("#video-pop-up .play-btn").fancybox({});
-});

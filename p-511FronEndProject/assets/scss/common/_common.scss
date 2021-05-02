@@ -17,6 +17,7 @@ a {
 }
 p {
   color: $gray-cl;
+  font-size: 14px
 }
 .featured-badge {
   @include badge;

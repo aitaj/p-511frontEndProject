@@ -31,8 +31,10 @@ section#agents {
         font-size: 14px;
         margin-bottom: 10px;
       }
+
       .input {
         position: relative;
+        margin-top: 10px;
         i {
           position: absolute;
           color: gray;
@@ -147,12 +149,15 @@ section#agents {
   .agent-cards {
     display: flex;
     flex-wrap: wrap;
+    animation-name: card-up;
+    animation-duration: 1s;
     .custom-card {
       background-color: white;
       width: 45%;
       padding: 30px;
-      margin: 20px 5px;
+      margin: 20px 15px 20px 0px;
       border-radius: 4px;
+
       @include mq-tablet {
         width: 100%;
       }
@@ -212,6 +217,7 @@ section#agents {
   }
 
   .showing-names-count {
+    margin-top: 15px;
     p {
       display: inline-block;
     }
@@ -235,4 +241,12 @@ section#agents {
 
 body {
   background-color: rgb(245, 242, 235);
+}
+@keyframes card-up {
+  0% {
+    transform: translateY(70px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }

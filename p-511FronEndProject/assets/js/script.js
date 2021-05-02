@@ -365,3 +365,4 @@ window.addEventListener("scroll", function (e) {
     sideInfo.style.position = "static";
   }
 });
+

@@ -120,6 +120,54 @@ body {
   color: white;
 }
 
+.select2-container--default .select2-selection--single {
+  height: 50px;
+  border: none;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  top: 9px;
+  right: 17px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  background-color: whitesmoke;
+  color: #7e7b7b;
+  padding: 11px;
+  height: 50px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered .g5ere__search-field {
+  line-height: 50px !important;
+  border: 1px solid #f0e9e9 !important;
+  padding: 0 20px !important;
+  background-color: #fff !important;
+}
+
+.select2-container--default .bs-searchbox {
+  padding: 4px 8px;
+}
+
+.select2-container--default .select2-search__field {
+  border: 1px solid #f0e9e9;
+  padding: 7px;
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field {
+  border: 1px solid #f0e9e9;
+}
+
+.select2-container {
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+.select2-container .select2-dropdown {
+  border: 1px solid #f0e9e9;
+}
+
 header {
   z-index: 333;
   background-color: #131516;
@@ -1193,6 +1241,7 @@ section#agents .search-register-ad .search input {
 
 section#agents .search-register-ad .search .input {
   position: relative;
+  margin-top: 10px;
 }
 
 section#agents .search-register-ad .search .input i {
@@ -1339,13 +1388,15 @@ section#agents .search-register-ad .latest-posts .item p {
 section#agents .agent-cards {
   display: flex;
   flex-wrap: wrap;
+  animation-name: card-up;
+  animation-duration: 1s;
 }
 
 section#agents .agent-cards .custom-card {
   background-color: white;
   width: 45%;
   padding: 30px;
-  margin: 20px 5px;
+  margin: 20px 15px 20px 0px;
   border-radius: 4px;
 }
 
@@ -1411,6 +1462,10 @@ section#agents .agent-cards .custom-card .custom-card-body .social span .fa-twit
   padding: 5px;
 }
 
+section#agents .showing-names-count {
+  margin-top: 15px;
+}
+
 section#agents .showing-names-count p {
   display: inline-block;
 }
@@ -1436,6 +1491,15 @@ section#agents .sorting-names .style-changing span {
 
 body {
   background-color: #f5f2eb;
+}
+
+@keyframes card-up {
+  0% {
+    transform: translateY(70px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 section#video-pop-up {

@@ -133,6 +133,7 @@ section#blogs {
         top: 20px;
       }
     }
+   
   }
   .categories {
     margin-top: 20px;
@@ -224,6 +225,7 @@ section#blogs {
     @include mq-tablet {
       display: none;
     }
-    
   }
 }
+
+

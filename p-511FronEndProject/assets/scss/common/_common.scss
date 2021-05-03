@@ -17,7 +17,7 @@ a {
 }
 p {
   color: $gray-cl;
-  font-size: 14px
+  font-size: 14px;
 }
 .featured-badge {
   @include badge;
@@ -31,7 +31,7 @@ p {
   @include badge;
   background-color: $sale-cl;
 }
-.transparent-badge{
+.transparent-badge {
   @include badge;
   background-color: rgba(23, 23, 37, 0.5);
 }
@@ -50,15 +50,15 @@ p {
   }
   display: flex;
   justify-content: flex-end;
-  @include mq-small{
-      display: flex;
-      justify-content: flex-start;
-      margin-bottom: 20px;
+  @include mq-small {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
   }
 }
-body{
+body {
   background-color: white;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 .paginater {
   span {
@@ -70,7 +70,6 @@ body{
     }
   }
 }
-
 
 //select styling
 
@@ -84,11 +83,11 @@ body{
     }
     .select2-selection__rendered {
       background-color: whitesmoke;
-      color: $gray-cl;
+      color: $placeholder-cl;
       padding: 11px;
       height: 50px;
       font-weight: 600;
-      font-size: 14px;
+      font-size: 13px;
       .g5ere__search-field {
         line-height: 50px !important;
         border: 1px solid $shadow-cl !important;

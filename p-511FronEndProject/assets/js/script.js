@@ -210,6 +210,26 @@ $(document).ready(function () {
       },
     },
   });
+
+  //contact slider
+  $("#contact .item-slider").owlCarousel({
+    margin: 30,
+    responsiveClass: true,
+    dots: true,
+    nav: false,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      576: {
+        items: 1,
+      },
+      992: {
+        items: 1,
+      },
+    },
+  });
+
 });
 
 //fixed-btn common

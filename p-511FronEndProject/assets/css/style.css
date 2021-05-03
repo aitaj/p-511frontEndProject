@@ -107,7 +107,7 @@ p {
 
 body {
   background-color: white;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .paginater span {
@@ -132,11 +132,11 @@ body {
 
 .select2-container--default .select2-selection--single .select2-selection__rendered {
   background-color: whitesmoke;
-  color: #7e7b7b;
+  color: #a5a3a3;
   padding: 11px;
   height: 50px;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .select2-container--default .select2-selection--single .select2-selection__rendered .g5ere__search-field {
@@ -1235,8 +1235,13 @@ section#agents .search-register-ad .search input {
   color: #7e7b7b;
   padding: 15px;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 13px;
   margin-bottom: 10px;
+}
+
+section#agents .search-register-ad .search select::placeholder,
+section#agents .search-register-ad .search input::placeholder {
+  color: #a5a3a3;
 }
 
 section#agents .search-register-ad .search .input {
@@ -1403,6 +1408,7 @@ section#agents .agent-cards .custom-card {
 @media (max-width: 992px) {
   section#agents .agent-cards .custom-card {
     width: 100%;
+    margin-right: 0px;
   }
 }
 
@@ -1495,7 +1501,7 @@ body {
 
 @keyframes card-up {
   0% {
-    transform: translateY(70px);
+    transform: translateY(100px);
   }
   100% {
     transform: translateY(0px);
@@ -2222,4 +2228,129 @@ section#blogs .popular li a {
   section#blogs .side-info {
     display: none;
   }
+}
+
+section#contact {
+  background-color: #f7f6f3;
+}
+
+@media (max-width: 992px) {
+  section#contact .side-info {
+    display: none;
+  }
+}
+
+section#contact .side-info .search {
+  background-color: white;
+  padding: 40px;
+  border-radius: 3px;
+}
+
+section#contact .side-info .search input {
+  width: 100%;
+  border: none;
+  background-color: whitesmoke;
+  color: gray;
+  padding: 15px;
+  font-weight: 600;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+section#contact .side-info .search input::placeholder {
+  color: #a5a3a3;
+  font-weight: 600;
+}
+
+section#contact .side-info .search h5 {
+  font-size: 16px;
+}
+
+section#contact .side-info .search .input {
+  position: relative;
+  margin-top: 10px;
+}
+
+section#contact .side-info .search .input i {
+  position: absolute;
+  color: gray;
+  right: 20px;
+  top: 20px;
+}
+
+section#contact .side-info .search a {
+  padding: 13px 25px;
+  color: white;
+  background-color: #d1a570;
+  border-radius: 5px;
+  transition: all 0.3s;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+section#contact .side-info .search a:hover {
+  background-color: #e66e46;
+}
+
+section#contact .side-info .register {
+  margin-top: 20px;
+  background-color: white;
+  padding: 40px;
+  border-radius: 3px;
+}
+
+section#contact .side-info .register p {
+  font-size: 14px;
+  color: #131516;
+}
+
+section#contact .side-info .register .img-wrapper {
+  margin: 50px;
+}
+
+section#contact .side-info .register a {
+  padding: 13px 25px;
+  color: white;
+  background-color: #d1a570;
+  border-radius: 5px;
+  transition: all 0.3s;
+  padding-top: 8px;
+}
+
+section#contact .side-info .register a:hover {
+  background-color: #e66e46;
+}
+
+section#contact .side-info .featured-properties {
+  padding: 40px 20px;
+  background-color: white;
+  margin-top: 20px;
+}
+
+section#contact .side-info .featured-properties img {
+  border-radius: 4px;
+}
+
+section#contact .side-info .featured-properties .item {
+  position: relative;
+}
+
+section#contact .side-info .featured-properties .item .item-layer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 0px;
+  left: 0px;
+  justify-content: space-between;
+  background-color: rgba(52, 52, 103, 0.3);
+  bottom: 0px;
+  right: 0px;
+  color: white;
+  padding: 30px;
+  border-radius: 4px;
+}
+
+section#contact .side-info .featured-properties .item .item-layer p {
+  color: white;
 }

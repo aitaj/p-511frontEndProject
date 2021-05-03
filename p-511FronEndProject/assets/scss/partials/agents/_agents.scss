@@ -28,13 +28,17 @@ section#agents {
         color: $gray-cl;
         padding: 15px;
         font-weight: 600;
-        font-size: 14px;
+        font-size: 13px;
         margin-bottom: 10px;
+        &::placeholder{
+          color: rgb(165, 163, 163);
+      }
       }
 
       .input {
         position: relative;
         margin-top: 10px;
+
         i {
           position: absolute;
           color: gray;
@@ -160,6 +164,7 @@ section#agents {
 
       @include mq-tablet {
         width: 100%;
+        margin-right: 0px;
       }
       .custom-card-header {
         border-bottom: 1px solid rgb(187, 183, 183);
@@ -244,7 +249,7 @@ body {
 }
 @keyframes card-up {
   0% {
-    transform: translateY(70px);
+    transform: translateY(100px);
   }
   100% {
     transform: translateY(0px);

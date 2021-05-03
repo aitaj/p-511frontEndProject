@@ -1,6 +1,23 @@
 section#contact {
   background-color: $milky-bg-cl;
-
+  padding: 50px 0px;
+  .header-wrapper {
+    padding-top: 25px;
+    border-bottom: 1px solid $shadow-cl;
+  }
+  h3 {
+    font-weight: 600;
+    font-size: 26px;
+    margin-bottom: 30px;
+    margin-top: 15px;
+  }
+  h5 {
+    font-size: 14px;
+  }
+  h4 {
+    font-size: 22px;
+    margin-top: 15px;
+  }
   .side-info {
     @include mq-tablet {
       display: none;
@@ -89,6 +106,64 @@ section#contact {
             color: white;
           }
         }
+      }
+    }
+  }
+  iframe {
+    width: 100%;
+  }
+  .contact-form {
+    font-size: 14px;
+    textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0px;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      &::placeholder {
+        height: 100px;
+        color: $placeholder-cl;
+      }
+    }
+    input {
+      margin: 8px 0px;
+      font-size: 14px;
+      border: 1px solid $shadow-cl;
+      height: 45px;
+      &::placeholder {
+        color: $placeholder-cl;
+      }
+    }
+  }
+  .btn-custom {
+    padding: 12px 70px;
+  }
+  .error-message {
+    background-color: crimson;
+    padding: 10px 25px;
+    border-radius: 4px;
+    color: $light-cl;
+    margin-top: 20px;
+  }
+  .icon,
+  .contact-info,
+  .hour-info {
+    display: inline-block;
+    margin-top: 20px;
+  }
+  .icon {
+    color: $main-cl;
+    font-size: 30px;
+    margin-top: 0px;
+  }
+  .contact-info,
+  .hour-info {
+    ul {
+      p {
+        margin: 0px;
+      }
+      li {
+        margin: 10px;
       }
     }
   }

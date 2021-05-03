@@ -1,0 +1,27 @@
+section#subscribe{
+    padding: 100px 0px;
+    background-image: url('https://demo1-homeid.g5plus.net/wp-content/uploads/2021/03/bg-mailchimp-02.jpg?id=5549');
+    input {
+        margin: 8px 0px;
+        font-size: 14px;
+        border: 1px solid $shadow-cl;
+        height: 45px;
+        width: 60%;
+        padding: 10px 25px;
+        border-radius: 2px;
+        &::placeholder {
+          color: $placeholder-cl;
+        }
+      }
+      a{
+          @include btn;
+          padding: 13px 55px;
+      }
+      h3{
+          line-height: 40px;
+          font-size: 30px;
+          color: white;
+          margin-bottom: 40px;
+          font-weight: 400;
+      }
+}

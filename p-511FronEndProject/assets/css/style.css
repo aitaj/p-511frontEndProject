@@ -2232,6 +2232,28 @@ section#blogs .popular li a {
 
 section#contact {
   background-color: #f7f6f3;
+  padding: 50px 0px;
+}
+
+section#contact .header-wrapper {
+  padding-top: 25px;
+  border-bottom: 1px solid #f0e9e9;
+}
+
+section#contact h3 {
+  font-weight: 600;
+  font-size: 26px;
+  margin-bottom: 30px;
+  margin-top: 15px;
+}
+
+section#contact h5 {
+  font-size: 14px;
+}
+
+section#contact h4 {
+  font-size: 22px;
+  margin-top: 15px;
 }
 
 @media (max-width: 992px) {
@@ -2353,4 +2375,111 @@ section#contact .side-info .featured-properties .item .item-layer {
 
 section#contact .side-info .featured-properties .item .item-layer p {
   color: white;
+}
+
+section#contact iframe {
+  width: 100%;
+}
+
+section#contact .contact-form {
+  font-size: 14px;
+}
+
+section#contact .contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+section#contact .contact-form textarea::placeholder {
+  height: 100px;
+  color: #a5a3a3;
+}
+
+section#contact .contact-form input {
+  margin: 8px 0px;
+  font-size: 14px;
+  border: 1px solid #f0e9e9;
+  height: 45px;
+}
+
+section#contact .contact-form input::placeholder {
+  color: #a5a3a3;
+}
+
+section#contact .btn-custom {
+  padding: 12px 70px;
+}
+
+section#contact .error-message {
+  background-color: crimson;
+  padding: 10px 25px;
+  border-radius: 4px;
+  color: white;
+  margin-top: 20px;
+}
+
+section#contact .icon,
+section#contact .contact-info,
+section#contact .hour-info {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+section#contact .icon {
+  color: #d1a570;
+  font-size: 30px;
+  margin-top: 0px;
+}
+
+section#contact .contact-info ul p,
+section#contact .hour-info ul p {
+  margin: 0px;
+}
+
+section#contact .contact-info ul li,
+section#contact .hour-info ul li {
+  margin: 10px;
+}
+
+section#subscribe {
+  padding: 100px 0px;
+  background-image: url("https://demo1-homeid.g5plus.net/wp-content/uploads/2021/03/bg-mailchimp-02.jpg?id=5549");
+}
+
+section#subscribe input {
+  margin: 8px 0px;
+  font-size: 14px;
+  border: 1px solid #f0e9e9;
+  height: 45px;
+  width: 60%;
+  padding: 10px 25px;
+  border-radius: 2px;
+}
+
+section#subscribe input::placeholder {
+  color: #a5a3a3;
+}
+
+section#subscribe a {
+  padding: 13px 25px;
+  color: white;
+  background-color: #d1a570;
+  border-radius: 5px;
+  transition: all 0.3s;
+  padding: 13px 55px;
+}
+
+section#subscribe a:hover {
+  background-color: #e66e46;
+}
+
+section#subscribe h3 {
+  line-height: 40px;
+  font-size: 30px;
+  color: white;
+  margin-bottom: 40px;
+  font-weight: 400;
 }

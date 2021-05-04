@@ -1,11 +1,11 @@
 let sideInfo = document.querySelector("#contact .side-info");
 window.addEventListener("scroll", function (e) {
-  if (window.scrollY > 923&&window.scrollY < 7000 ) {
+  if (window.scrollY > 923&&window.scrollY < 4000 ) {
     sideInfo.style.position = "fixed";
     sideInfo.style.bottom = "0";
     sideInfo.style.width = `${sideInfo.parentNode.offsetWidth}px`;
   } 
-  else if(window.scrollY > 7000 ){
+  else if(window.scrollY > 5000 ){
     sideInfo.style.position = "absolute";
     sideInfo.style.bottom = "0";
   }

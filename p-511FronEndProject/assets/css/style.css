@@ -535,26 +535,13 @@ header section#navbar .main-ul-li:hover .listing-ul .listing-ul-li:hover .for-sa
   animation-duration: 0.6s;
 }
 
+header section#navbar .listing-ul-li {
+  display: flex;
+  justify-content: space-between;
+}
+
 @media (max-width: 992px) {
-  header section#navbar .for-sale {
-    display: none;
-  }
-  header section#navbar .nav-wrapper.active ul {
-    transform: translateX(0px);
-  }
-  header section#navbar .main-ul-li:hover .listing-ul {
-    display: block;
-    animation: none;
-  }
-  header section#navbar .main-ul-li:hover .listing-ul .listing-ul-li:hover .for-sale {
-    display: block;
-    animation: none;
-  }
-  header section#navbar .main-ul-li {
-    padding: 15px 0px;
-    position: static;
-  }
-  header section#navbar .main-ul-li .listing-ul {
+  header section#navbar .listing-ul-li {
     display: none;
   }
 }
@@ -568,6 +555,7 @@ header section#advanced-search {
   right: 40px;
   z-index: 99;
   padding: 0px 40px;
+  display: block;
 }
 
 @media (max-width: 992px) {
@@ -835,6 +823,16 @@ header section#advanced-search .checkbox input:checked {
   }
   100% {
     transform: translateY(0px);
+  }
+}
+
+.hide-advance {
+  opacity: 0;
+}
+
+@media (max-width: 992px) {
+  .hide-advance {
+    opacity: 1;
   }
 }
 
@@ -1913,6 +1911,16 @@ body {
   }
 }
 
+header section#advanced-search {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  header section#advanced-search {
+    display: block;
+  }
+}
+
 section#video-pop-up {
   background-image: url(https://demo1-homeid.g5plus.net/wp-content/uploads/2021/03/bg-about-01.jpg?id=5261);
   position: relative;
@@ -2659,6 +2667,10 @@ section#contact h5 {
 section#contact h4 {
   font-size: 22px;
   margin-top: 15px;
+}
+
+section#contact .side-info {
+  z-index: 33;
 }
 
 @media (max-width: 992px) {

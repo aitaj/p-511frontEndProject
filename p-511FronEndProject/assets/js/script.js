@@ -1,7 +1,7 @@
 //navbar started
 
 //hiding navbar
-let logInBtnNav = document.querySelector("#navbar .sign-in-btn ");
+let logInBtnNav = document.querySelector("#navbar .sign-in-btn");
 let closeLoginBtns = document.querySelectorAll(".pop-up .fa-times");
 let logInBtn = document.querySelectorAll(".pop-up .log-in");
 let registBtn = document.querySelectorAll(".pop-up .register");

@@ -325,33 +325,12 @@ header {
       }
     }
 
-    @include mq-tablet {
-      .for-sale {
+
+    .listing-ul-li{
+      display: flex;
+      justify-content: space-between;
+      @include mq-tablet{
         display: none;
-      }
-      .nav-wrapper.active ul {
-        transform: translateX(0px);
-      }
-      .main-ul-li:hover {
-        .listing-ul {
-          display: block;
-          animation: none;
-          .listing-ul-li {
-            &:hover {
-              .for-sale {
-                display: block;
-                animation: none;
-              }
-            }
-          }
-        }
-      }
-      .main-ul-li {
-        padding: 15px 0px;
-        position: static;
-        .listing-ul {
-          display: none;
-        }
       }
     }
   }
@@ -364,7 +343,7 @@ header {
     right: 40px;
     z-index: 99;
     padding: 0px 40px;
-
+    display: block;
     @include mq-tablet {
       position: static;
       padding-top: 0px;
@@ -563,5 +542,13 @@ header {
   }
   100% {
     transform: translateY(0px);
+  }
+}
+
+//for hiding advance-search in other pages
+.hide-advance {
+  opacity: 0;
+  @include mq-tablet {
+    opacity: 1;
   }
 }

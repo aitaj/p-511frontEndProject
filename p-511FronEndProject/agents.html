@@ -5,6 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
       href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
       rel="stylesheet"
     />
@@ -32,14 +40,64 @@
     <header>
       <section id="navbar">
         <div class="pop-up d-none">
-          <div class="row">
+          <div class="row w-100">
             <div class="col-md-6 offset-md-3">
-              <div class="log-in bg-light d-flex justify-content-between">
-                <ul class="d-flex">
-                  <li><a href="#">Log In</a></li>
-                  <li><a href="#">Register</a></li>
-                </ul>
-                <i class="fas fa-times"></i>
+              <div class="log-in-wrapper d-none">
+                <div class="log-in-part">
+                  <ul class="d-flex">
+                    <li class="log-in"><a href="#">Log In</a></li>
+                    <li class="register"><a href="#">Register</a></li>
+                  </ul>
+                  <i class="fas fa-times"></i>
+                </div>
+                <div class="login-body mt-3">
+                  <h3>Log In</h3>
+
+                  <p>Dnt have an ccount yet?</p>
+                  <span>Sign-up for free</span>
+                  <input placeholder="EMAIL OR EMAIL ADDRESS" type="text" />
+                  <div class="password">
+                    <input placeholder="PASSWORD" type="password" />
+                    <i class="fas fa-eye-slash"></i>
+                  </div>
+                  <div class="checkbox">
+                    <div class="check-items">
+                      <input class="check-box" name="check" type="checkbox" />
+                      <label for="check">Remember me</label>
+                    </div>
+                    <span>Loss password</span>
+                  </div>
+
+                  <a href="#" class="btn-custom">Login</a>
+                </div>
+              </div>
+              <div class="register-wrapper d-none">
+                <div class="log-in-part">
+                  <ul class="d-flex">
+                    <li class="log-in"><a href="#">Log In</a></li>
+                    <li class="register"><a href="#">Register</a></li>
+                  </ul>
+                  <i class="fas fa-times"></i>
+                </div>
+                <div class="login-body mt-3">
+                  <h3>Sign up</h3>
+
+                  <p>Already have an account?</p>
+                  <span>Log in</span>
+                  <input placeholder="USERNAME" type="text" />
+                  <div class="password">
+                    <input placeholder="EMAIL" type="password" />
+                  </div>
+                  <div class="checkbox">
+                    <div class="check-items">
+                      <input class="check-box" name="check" type="checkbox" />
+                      <label for="check">I agree with your</label>
+                    </div>
+                    <span>Terms&conditions</span>
+                  </div>
+
+                  <a href="#" class="btn-custom">Login</a>
+                </div>
               </div>
             </div>
           </div>
@@ -66,7 +124,7 @@
                       Listing <i class="fas fa-chevron-down"></i>
                     </a>
                     <ul class="listing-ul">
-                      <li class="listing-ul-li d-flex justify-content-between">
+                      <li class="listing-ul-li ">
                         <a href="#">Property Status</a
                         ><i class="fas fa-chevron-right"></i>
                         <ul class="for-sale">
@@ -74,7 +132,7 @@
                           <li><a href="#">For Sale</a></li>
                         </ul>
                       </li>
-                      <li class="listing-ul-li d-flex justify-content-between">
+                      <li class="listing-ul-li ">
                         <a href="#">Property Type</a
                         ><i class="fas fa-chevron-right"></i>
                         <ul class="for-sale">
@@ -90,7 +148,7 @@
                           <li><a href="#">Villa</a></li>
                         </ul>
                       </li>
-                      <li class="listing-ul-li d-flex justify-content-between">
+                      <li class="listing-ul-li">
                         <a href="#">Province/City</a
                         ><i class="fas fa-chevron-right"></i>
                         <ul class="for-sale">
@@ -99,7 +157,7 @@
                           <li><a href="#">Texas</a></li>
                         </ul>
                       </li>
-                      <li class="listing-ul-li d-flex justify-content-between">
+                      <li class="listing-ul-li ">
                         <a href="#">Province/State</a
                         ><i class="fas fa-chevron-right"></i>
                         <ul class="for-sale">
@@ -108,7 +166,7 @@
                           <li><a href="#">Texas</a></li>
                         </ul>
                       </li>
-                      <li class="listing-ul-li d-flex justify-content-between">
+                      <li class="listing-ul-li">
                         <a href="#">Property Feature</a
                         ><i class="fas fa-chevron-right"></i>
                         <ul class="for-sale">
@@ -125,16 +183,16 @@
                   <li class="main-ul-li">
                     <a href="#"> Pages<i class="fas fa-chevron-down"></i></a>
                     <ul class="listing-ul">
-                      <li class="listing-ul-li d-flex justify-content-between">
+                      <li class="listing-ul-li ">
                         <a href="#">Property Status</a>
                       </li>
-                      <li class="listing-ul-li d-flex justify-content-between">
+                      <li class="listing-ul-li ">
                         <a href="#">Property Type</a>
                       </li>
-                      <li class="listing-ul-li d-flex justify-content-between">
+                      <li class="listing-ul-li ">
                         <a href="#">Province/State</a>
                       </li>
-                      <li class="listing-ul-li d-flex justify-content-between">
+                      <li class="listing-ul-li ">
                         <a href="#">Property Feature</a>
                       </li>
                     </ul>
@@ -147,7 +205,9 @@
               <div class="sign-in">
                 <ul class="d-flex">
                   <li>
-                    <a href="#"> <i class="fas fa-user"></i>SIGN IN</a>
+                    <a class="sign-in-btn" href="#">
+                      <i class="fas fa-user"></i>SIGN IN</a
+                    >
                   </li>
                   <li>
                     <a href="#">Add Listing<i class="fas fa-house-user"></i></a>
@@ -159,34 +219,268 @@
         </div>
       </section>
       <section id="advanced-search">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-4">
-              <div class="keyword">
-                <input type="text" />
-              </div>
+        <div class="row mt-4">
+          <div class="col-lg-4 col-md-12">
+            <div class="keyword">
+              <p>KEYWORD</p>
+              <i class="fas fa-cog"></i>
+              <input placeholder="Enter Keyword..." type="text" /><i
+                class="fas fa-search"
+              ></i>
             </div>
-            <div class="col-lg-2">
-          <div class="test">
-            <select class="agency-dropdown-1 js-example-basic-single">
-              <option>All Agency</option>
-              <option>Construction</option>
-              <option>Eco House Company</option>
-              <option>Royal Caribbean</option>
-            </select>
           </div>
-            </div>
-            <div class="col-lg-2">
-              <select class="agency-dropdown-2 js-example-basic-single">
-                <option>All Agency</option>
+          <div class="col-lg-2 col-md-6">
+            <div class="status hide">
+              <p>STATUS</p>
+              <select class="agency-dropdown js-example-basic-single">
+                <option>All Status</option>
                 <option>Construction</option>
                 <option>Eco House Company</option>
                 <option>Royal Caribbean</option>
               </select>
             </div>
-            <div class="col-lg-2"><div class="advanced"></div></div>
-            <div class="col-lg-2">
-              <a href="#" class="btn-custom">Button</a>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <div class="status hide">
+              <p>TYPE</p>
+              <select class="agency-dropdown js-example-basic-single">
+                <option>All Types</option>
+                <option>Construction</option>
+                <option>Eco House Company</option>
+                <option>Royal Caribbean</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <div class="advanced">
+              <h5>Advanced</h5>
+              <span class="advance-open"
+                ><i class="fas fa-plus-circle"></i
+              ></span>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-12">
+            <div class="btn-wrapper">
+              <a href="#" class="btn-custom">Search</a>
+            </div>
+          </div>
+          <div class="col-lg-12 mt-4">
+            <div class="advanced-items d-none">
+              <div class="row">
+                <div class="col-lg-3 col-md-6">
+                  <div class="status">
+                    <p>BEDROOMS</p>
+                    <select class="agency-dropdown js-example-basic-single">
+                      <option>Bedrooms</option>
+                      <option>Construction</option>
+                      <option>Eco House Company</option>
+                      <option>Royal Caribbean</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <div class="status">
+                    <p>BATHROOMS</p>
+                    <select class="agency-dropdown js-example-basic-single">
+                      <option>Bathrooms</option>
+                      <option>Construction</option>
+                      <option>Eco House Company</option>
+                      <option>Royal Caribbean</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <div class="status">
+                    <p>STATES</p>
+                    <select class="agency-dropdown js-example-basic-single">
+                      <option>All States</option>
+                      <option>Construction</option>
+                      <option>Eco House Company</option>
+                      <option>Royal Caribbean</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <div class="status">
+                    <p>CITIES</p>
+                    <select class="agency-dropdown js-example-basic-single">
+                      <option>All Cities</option>
+                      <option>Construction</option>
+                      <option>Eco House Company</option>
+                      <option>Royal Caribbean</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col-lg-3 col-md-6">
+                  <div class="status">
+                    <p>GARAGES</p>
+                    <select class="agency-dropdown js-example-basic-single">
+                      <option>Any Garages</option>
+                      <option>Construction</option>
+                      <option>Eco House Company</option>
+                      <option>Royal Caribbean</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <div class="status">
+                    <p>LABEL</p>
+                    <select class="agency-dropdown js-example-basic-single">
+                      <option>All Labels</option>
+                      <option>Construction</option>
+                      <option>Eco House Company</option>
+                      <option>Royal Caribbean</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <div class="keyword">
+                    <p>PROPERTY ID</p>
+                    <input placeholder="Property Id" type="text" />
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-lg-6 col-md-6 mt-3">
+                  <div class="range">
+                    <p>PRICE RANGE: FROM $409,912 TO $1,699,307</p>
+                    <input
+                      type="range"
+                      min="1090000"
+                      max="100000000"
+                      step="1000"
+                      value="300"
+                      class="range"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 mt-3">
+                  <div class="range">
+                    <p>SIZE RANGE: FROM 247 SQFT TO 468 SQFT 468 SQFT</p>
+                    <input
+                      type="range"
+                      min="1090000"
+                      max="100000000"
+                      step="1000"
+                      value="300"
+                      class="range"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-5">
+                <div class="col-lg-12">
+                  <div class="other-features d-flex mt-4">
+                    <span class="other-features-btn"
+                      ><i class="far fa-plus-square"></i
+                    ></span>
+                    <h5>OTHER FEATURES</h5>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="respo">
+                    <a href="#" class="btn-custom">Search</a>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="other-feature-items d-none">
+                    <div class="row mt-4">
+                      <div class="col-lg-3 col-md-4 col-6">
+                        <div class="checkbox">
+                          <input name="check" type="checkbox" />
+                          <label for="check">Washer</label>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-4 col-6">
+                        <div class="checkbox">
+                          <input name="check" type="checkbox" />
+                          <label for="check">Washer</label>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-4 col-6">
+                        <div class="checkbox">
+                          <input name="check" type="checkbox" />
+                          <label for="check">Washer</label>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-4 col-6">
+                        <div class="checkbox">
+                          <input name="check" type="checkbox" />
+                          <label for="check">Washer</label>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-4 col-6">
+                        <div class="checkbox">
+                          <input name="check" type="checkbox" />
+                          <label for="check">Washer</label>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-4 col-6">
+                        <div class="checkbox">
+                          <input name="check" type="checkbox" />
+                          <label for="check">Washer</label>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-4 col-6">
+                        <div class="checkbox">
+                          <input name="check" type="checkbox" />
+                          <label for="check">Washer</label>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-4 col-6">
+                        <div class="checkbox">
+                          <input name="check" type="checkbox" />
+                          <label for="check">Washer</label>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-4 col-6">
+                        <div class="checkbox">
+                          <input name="check" type="checkbox" />
+                          <label for="check">Washer</label>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-4 col-6">
+                        <div class="checkbox">
+                          <input name="check" type="checkbox" />
+                          <label for="check">Washer</label>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-4 col-6">
+                        <div class="checkbox">
+                          <input name="check" type="checkbox" />
+                          <label for="check">Washer</label>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-4 col-6">
+                        <div class="checkbox">
+                          <input name="check" type="checkbox" />
+                          <label for="check">Washer</label>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-4 col-6">
+                        <div class="checkbox">
+                          <input name="check" type="checkbox" />
+                          <label for="check">Washer</label>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-4 col-6">
+                        <div class="checkbox">
+                          <input name="check" type="checkbox" />
+                          <label for="check">Washer</label>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-4 col-6">
+                        <div class="checkbox">
+                          <input name="check" type="checkbox" />
+                          <label for="check">Washer</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

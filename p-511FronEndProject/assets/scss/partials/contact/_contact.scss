@@ -22,6 +22,7 @@ section#contact {
     @include mq-tablet {
       display: none;
     }
+    z-index: 33;
     .search {
       background-color: white;
       padding: 40px;

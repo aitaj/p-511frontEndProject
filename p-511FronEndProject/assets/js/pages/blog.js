@@ -1,7 +1,5 @@
 //blog section started
 let sideInfo = document.querySelector("#blogs .side-info");
-let footer = document.querySelector("footer");
-let diffScroll = document.body.offsetHeight - footer.offsetHeight;
 window.addEventListener("scroll", function (e) {
   if (window.scrollY > 923&&window.scrollY < 7000 ) {
     sideInfo.style.position = "fixed";

@@ -30,108 +30,167 @@
   </head>
   <body>
     <header>
-      <div class="pop-up d-none">
-        <div class="row">
-          <div class="col-md-6 offset-md-3">
-            <div class="log-in bg-light d-flex justify-content-between">
-              <ul class="d-flex">
-                <li><a href="#">Log In</a></li>
-                <li><a href="#">Register</a></li>
-              </ul>
-              <i class="fas fa-times"></i>
+      <section id="navbar">
+        <div class="pop-up d-none">
+          <div class="row">
+            <div class="col-md-6 offset-md-3">
+              <div class="log-in bg-light d-flex justify-content-between">
+                <ul class="d-flex">
+                  <li><a href="#">Log In</a></li>
+                  <li><a href="#">Register</a></li>
+                </ul>
+                <i class="fas fa-times"></i>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="navbar-wrapper-all">
-            <div class="logo">
-              <img
-                class="img-fluid"
-                src="https://demo1-homeid.g5plus.net/wp-content/uploads/2021/03/demo-logo.png"
-                alt=""
-              />
-            </div>
+        <div class="container">
+          <div class="row">
+            <div class="navbar-wrapper-all">
+              <div class="logo">
+                <img
+                  class="img-fluid"
+                  src="https://demo1-homeid.g5plus.net/wp-content/uploads/2021/03/demo-logo.png"
+                  alt=""
+                />
+              </div>
 
-            <div class="nav-wrapper">
-              <ul class="nav-main-ul">
-                <li><input type="text" placeholder="Type and hit enter" /></li>
-                <li class="active main-ul-li"><a href="#">Home</a></li>
-                <li class="main-ul-li">
-                  <a href="#"> Listing <i class="fas fa-chevron-down"></i> </a>
-                  <ul class="listing-ul d-none">
-                    <li class="listing-ul-li d-flex justify-content-between">
-                      <a href="#">Property Status</a
-                      ><i class="fas fa-chevron-right"></i>
-                      <ul class="for-sale d-none">
-                        <li><a href="#">For Sale</a></li>
-                        <li><a href="#">For Sale</a></li>
-                        <li><a href="#">For Sale</a></li>
-                      </ul>
-                    </li>
-                    <li class="listing-ul-li d-flex justify-content-between">
-                      <a href="#">Property Type</a>
-                      <i class="fas fa-chevron-right"></i>
-                      <ul class="for-sale d-none">
-                        <li><a href="#">For Sale</a></li>
-                        <li><a href="#">For Sale</a></li>
-                        <li><a href="#">For Sale</a></li>
-                      </ul>
-                    </li>
-                    <li class="listing-ul-li d-flex justify-content-between">
-                      <a href="#">Property City</a>
-                      <i class="fas fa-chevron-right"></i>
-                      <ul class="for-sale d-none">
-                        <li><a href="#">For Sale</a></li>
-                        <li><a href="#">For Sale</a></li>
-                        <li><a href="#">For Sale</a></li>
-                      </ul>
-                    </li>
-                    <li class="listing-ul-li d-flex justify-content-between">
-                      <a href="#">Property State</a
-                      ><i class="fas fa-chevron-right"></i>
-                      <ul class="for-sale d-none">
-                        <li><a href="#">For Sale</a></li>
-                        <li><a href="#">For Sale</a></li>
-                        <li><a href="#">For Sale</a></li>
-                      </ul>
-                    </li>
-                    <li class="listing-ul-li d-flex justify-content-between">
-                      <a href="#">Property Feature</a>
-                      <i class="fas fa-chevron-right"></i>
-                      <ul class="for-sale d-none">
-                        <li><a href="#">For Sale</a></li>
-                        <li><a href="#">For Sale</a></li>
-                        <li><a href="#">For Sale</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-                <li class="main-ul-li"><a href="#">Agency</a></li>
-                <li class="main-ul-li"><a href="#"> Agent</a></li>
-                <li class="main-ul-li"><a href="#"> Blog</a></li>
-                <li class="main-ul-li">
-                  <a href="#"> Pages<i class="fas fa-chevron-down"></i></a>
-                </li>
-              </ul>
-            </div>
-            <div class="nav-bar-icon">
-              <i class="fas fa-bars"></i>
-            </div>
-            <div class="sign-in">
-              <ul class="d-flex">
-                <li>
-                  <a href="#"> <i class="fas fa-user"></i>SIGN IN</a>
-                </li>
-                <li>
-                  <a href="#">Add Listing<i class="fas fa-house-user"></i></a>
-                </li>
-              </ul>
+              <div class="nav-wrapper">
+                <ul class="nav-main-ul">
+                  <li class="search">
+                    <input type="text" placeholder="Type and hit enter" />
+                  </li>
+                  <li class="active main-ul-li"><a href="#">Home</a></li>
+                  <li class="main-ul-li">
+                    <a href="#">
+                      Listing <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="listing-ul">
+                      <li class="listing-ul-li d-flex justify-content-between">
+                        <a href="#">Property Status</a
+                        ><i class="fas fa-chevron-right"></i>
+                        <ul class="for-sale">
+                          <li><a href="#">For Rent</a></li>
+                          <li><a href="#">For Sale</a></li>
+                        </ul>
+                      </li>
+                      <li class="listing-ul-li d-flex justify-content-between">
+                        <a href="#">Property Type</a
+                        ><i class="fas fa-chevron-right"></i>
+                        <ul class="for-sale">
+                          <li><a href="#">Apartment</a></li>
+                          <li><a href="#">Bar</a></li>
+                          <li><a href="#">Cafe</a></li>
+                          <li><a href="#">Farm</a></li>
+                          <li><a href="#">House</a></li>
+                          <li><a href="#">Luxury Homes</a></li>
+                          <li><a href="#">Office</a></li>
+                          <li><a href="#">Single Family</a></li>
+                          <li><a href="#">Store</a></li>
+                          <li><a href="#">Villa</a></li>
+                        </ul>
+                      </li>
+                      <li class="listing-ul-li d-flex justify-content-between">
+                        <a href="#">Province/City</a
+                        ><i class="fas fa-chevron-right"></i>
+                        <ul class="for-sale">
+                          <li><a href="#">Californiya</a></li>
+                          <li><a href="#">New York</a></li>
+                          <li><a href="#">Texas</a></li>
+                        </ul>
+                      </li>
+                      <li class="listing-ul-li d-flex justify-content-between">
+                        <a href="#">Province/State</a
+                        ><i class="fas fa-chevron-right"></i>
+                        <ul class="for-sale">
+                          <li><a href="#">Californiya</a></li>
+                          <li><a href="#">New York</a></li>
+                          <li><a href="#">Texas</a></li>
+                        </ul>
+                      </li>
+                      <li class="listing-ul-li d-flex justify-content-between">
+                        <a href="#">Property Feature</a
+                        ><i class="fas fa-chevron-right"></i>
+                        <ul class="for-sale">
+                          <li><a href="#">Air Conditioning</a></li>
+                          <li><a href="#">Gym</a></li>
+                          <li><a href="#">Swimming Pool</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="main-ul-li"><a href="#">Agency</a></li>
+                  <li class="main-ul-li"><a href="#"> Agent</a></li>
+                  <li class="main-ul-li"><a href="#"> Blog</a></li>
+                  <li class="main-ul-li">
+                    <a href="#"> Pages<i class="fas fa-chevron-down"></i></a>
+                    <ul class="listing-ul">
+                      <li class="listing-ul-li d-flex justify-content-between">
+                        <a href="#">Property Status</a>
+                      </li>
+                      <li class="listing-ul-li d-flex justify-content-between">
+                        <a href="#">Property Type</a>
+                      </li>
+                      <li class="listing-ul-li d-flex justify-content-between">
+                        <a href="#">Province/State</a>
+                      </li>
+                      <li class="listing-ul-li d-flex justify-content-between">
+                        <a href="#">Property Feature</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="nav-bar-icon">
+                <i class="fas fa-bars"></i>
+              </div>
+              <div class="sign-in">
+                <ul class="d-flex">
+                  <li>
+                    <a href="#"> <i class="fas fa-user"></i>SIGN IN</a>
+                  </li>
+                  <li>
+                    <a href="#">Add Listing<i class="fas fa-house-user"></i></a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+      <section id="advanced-search">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="keyword">
+                <input type="text" />
+              </div>
+            </div>
+            <div class="col-lg-2">
+          <div class="test">
+            <select class="agency-dropdown-1 js-example-basic-single">
+              <option>All Agency</option>
+              <option>Construction</option>
+              <option>Eco House Company</option>
+              <option>Royal Caribbean</option>
+            </select>
+          </div>
+            </div>
+            <div class="col-lg-2">
+              <select class="agency-dropdown-2 js-example-basic-single">
+                <option>All Agency</option>
+                <option>Construction</option>
+                <option>Eco House Company</option>
+                <option>Royal Caribbean</option>
+              </select>
+            </div>
+            <div class="col-lg-2"><div class="advanced"></div></div>
+            <div class="col-lg-2">
+              <a href="#" class="btn-custom">Button</a>
+            </div>
+          </div>
+        </div>
+      </section>
     </header>
     <main>
       <section id="agents">
@@ -447,6 +506,7 @@
       </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="assets/js/script.js"></script>

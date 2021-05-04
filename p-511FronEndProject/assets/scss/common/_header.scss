@@ -207,6 +207,7 @@ header {
         }
       }
     }
+
     .pop-up {
       background-color: rgba(28, 6, 76, 0.25);
       height: 600px;
@@ -215,18 +216,88 @@ header {
       top: 0px;
       width: 100%;
       z-index: 312;
-      .log-in {
-        padding: 30px;
-        margin: 10%;
-        ul {
-          li {
-            a {
-              color: $dark-cl;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .log-in-wrapper,
+      .register-wrapper {
+        z-index: 555;
+        background-color: white;
+        padding: 25px;
+        width: 100%;
+        border-radius: 4px;
+        p {
+          display: inline-block;
+        }
+        span {
+          text-decoration: underline;
+        }
+        input {
+          width: 100%;
+          border: none;
+          background-color: whitesmoke;
+          color: $gray-cl;
+          padding: 15px;
+          font-weight: 500;
+          font-size: 13px;
+          margin-bottom: 10px;
+          &::placeholder {
+            color: rgb(165, 163, 163);
+          }
+        }
+        .log-in-part {
+          display: flex;
+          justify-content: space-between;
+          ul {
+            li {
+              margin-left: 25px;
+              a {
+                color: $dark-cl;
+                font-weight: 500;
+                font-size: 17px;
+              }
             }
           }
         }
+        .password {
+          position: relative;
+          i {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+          }
+        }
+      }
+      .checkbox {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        left: auto;
+        justify-content: space-between;
+        .check-box {
+          width: 40px;
+        }
+        span {
+          font-size: 14px;
+        }
+        label {
+          font-size: 15px;
+        }
+      }
+      .register-wrapper {
+        .check-box {
+          justify-content: center;
+        }
+      }
+      .btn-custom {
+        @include btn;
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin-top: 20px;
       }
     }
+
     //dropdowns
     .main-ul-li {
       padding: 15px 0px;
@@ -253,34 +324,83 @@ header {
         }
       }
     }
+
+    @include mq-tablet {
+      .for-sale {
+        display: none;
+      }
+      .nav-wrapper.active ul {
+        transform: translateX(0px);
+      }
+      .main-ul-li:hover {
+        .listing-ul {
+          display: block;
+          animation: none;
+          .listing-ul-li {
+            &:hover {
+              .for-sale {
+                display: block;
+                animation: none;
+              }
+            }
+          }
+        }
+      }
+      .main-ul-li {
+        padding: 15px 0px;
+        position: static;
+        .listing-ul {
+          display: none;
+        }
+      }
+    }
   }
   section#advanced-search {
     background-color: $dark-cl;
     background-color: #131516;
     position: absolute;
-    top: 400px;
+    top: 500px;
     left: 40px;
     right: 40px;
     z-index: 99;
-    padding: 30px 40px 100px;
+    padding: 0px 40px;
 
     @include mq-tablet {
       position: static;
       padding-top: 0px;
+
+      .hide,
+      .btn-wrapper {
+        display: none;
+      }
     }
     p {
       color: rgb(199, 192, 192);
     }
+    .respo {
+      display: none;
+      @include btn;
+      @include mq-tablet {
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+        text-align: center;
+      }
+    }
     .btn-wrapper {
       height: 100%;
       text-align: center;
+      display: flex;
+      align-items: center;
       .btn-custom {
         @include btn;
         width: 100%;
         padding: 15px 20px;
       }
-      @include mq-tablet{
+
+      @include mq-tablet {
         margin-top: 15px;
+        display: none;
       }
     }
     .advanced {
@@ -288,7 +408,7 @@ header {
       align-items: center;
       justify-content: space-evenly;
       height: 100%;
-      @include mq-tablet{
+      @include mq-tablet {
         display: none;
       }
       h5 {
@@ -305,7 +425,7 @@ header {
       position: relative;
       p {
         font-weight: 500;
-        @include mq-tablet{
+        @include mq-tablet {
           display: none;
         }
       }
@@ -314,11 +434,11 @@ header {
         border: none;
         width: 100%;
         border-bottom: 1px solid $gray-cl;
-     
-        @include mq-tablet{
+
+        @include mq-tablet {
           margin-top: 20px;
           background-color: whitesmoke;
-          padding: 10px 20px;
+          padding: 10px 40px;
           border-radius: 4px;
         }
         &::placeholder {
@@ -327,30 +447,42 @@ header {
           font-size: 14px;
         }
       }
-      i {
+      i.fa-search {
         position: absolute;
         right: 20px;
         bottom: 8px;
         color: white;
-        @include mq-tablet{
+        @include mq-tablet {
+          color: gray;
+          bottom: 15px;
+        }
+      }
+      i.fa-cog {
+        display: none;
+        @include mq-tablet {
+          display: block;
           color: gray;
           bottom: 10px;
+          position: absolute;
+          left: 10px;
+          bottom: 15px;
+          color: gray;
         }
       }
     }
-    
+
     .status {
       p {
         margin-bottom: 0px;
-        margin-left: 20px;
-        @include mq-tablet{
+        margin-left: 10px;
+        @include mq-tablet {
           display: none;
         }
       }
     }
     .select2-container--default .select2-selection--single {
       background-color: transparent;
-      @include mq-tablet{
+      @include mq-tablet {
         background-color: whitesmoke;
       }
     }
@@ -359,25 +491,18 @@ header {
       .select2-selection__rendered {
       background-color: transparent;
       color: white;
-      @include mq-tablet{
+      @include mq-tablet {
         background-color: whitesmoke;
         color: gray;
         border-radius: 4px;
       }
     }
     .range {
-      width: 100%;
-      appearance: none;
-      height: 4px;
-      margin: 10px;
-      &::-ms-thumb {
-        background: $main-cl;
-      }
+      width: 300px;
+      margin: 0px;
     }
     .other-features {
       color: white;
-      margin-left: 20px;
-      margin-top: 30px;
       i {
         color: $main-cl;
       }

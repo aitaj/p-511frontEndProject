@@ -400,15 +400,115 @@ header section#navbar .pop-up {
   top: 0px;
   width: 100%;
   z-index: 312;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-header section#navbar .pop-up .log-in {
-  padding: 30px;
-  margin: 10%;
+header section#navbar .pop-up .log-in-wrapper,
+header section#navbar .pop-up .register-wrapper {
+  z-index: 555;
+  background-color: white;
+  padding: 25px;
+  width: 100%;
+  border-radius: 4px;
 }
 
-header section#navbar .pop-up .log-in ul li a {
+header section#navbar .pop-up .log-in-wrapper p,
+header section#navbar .pop-up .register-wrapper p {
+  display: inline-block;
+}
+
+header section#navbar .pop-up .log-in-wrapper span,
+header section#navbar .pop-up .register-wrapper span {
+  text-decoration: underline;
+}
+
+header section#navbar .pop-up .log-in-wrapper input,
+header section#navbar .pop-up .register-wrapper input {
+  width: 100%;
+  border: none;
+  background-color: whitesmoke;
+  color: #7e7b7b;
+  padding: 15px;
+  font-weight: 500;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+header section#navbar .pop-up .log-in-wrapper input::placeholder,
+header section#navbar .pop-up .register-wrapper input::placeholder {
+  color: #a5a3a3;
+}
+
+header section#navbar .pop-up .log-in-wrapper .log-in-part,
+header section#navbar .pop-up .register-wrapper .log-in-part {
+  display: flex;
+  justify-content: space-between;
+}
+
+header section#navbar .pop-up .log-in-wrapper .log-in-part ul li,
+header section#navbar .pop-up .register-wrapper .log-in-part ul li {
+  margin-left: 25px;
+}
+
+header section#navbar .pop-up .log-in-wrapper .log-in-part ul li a,
+header section#navbar .pop-up .register-wrapper .log-in-part ul li a {
   color: #131516;
+  font-weight: 500;
+  font-size: 17px;
+}
+
+header section#navbar .pop-up .log-in-wrapper .password,
+header section#navbar .pop-up .register-wrapper .password {
+  position: relative;
+}
+
+header section#navbar .pop-up .log-in-wrapper .password i,
+header section#navbar .pop-up .register-wrapper .password i {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+
+header section#navbar .pop-up .checkbox {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  left: auto;
+  justify-content: space-between;
+}
+
+header section#navbar .pop-up .checkbox .check-box {
+  width: 40px;
+}
+
+header section#navbar .pop-up .checkbox span {
+  font-size: 14px;
+}
+
+header section#navbar .pop-up .checkbox label {
+  font-size: 15px;
+}
+
+header section#navbar .pop-up .register-wrapper .check-box {
+  justify-content: center;
+}
+
+header section#navbar .pop-up .btn-custom {
+  padding: 13px 25px;
+  color: white;
+  background-color: #d1a570;
+  border-radius: 5px;
+  transition: all 0.3s;
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}
+
+header section#navbar .pop-up .btn-custom:hover {
+  background-color: #e66e46;
 }
 
 header section#navbar .main-ul-li {
@@ -435,15 +535,39 @@ header section#navbar .main-ul-li:hover .listing-ul .listing-ul-li:hover .for-sa
   animation-duration: 0.6s;
 }
 
+@media (max-width: 992px) {
+  header section#navbar .for-sale {
+    display: none;
+  }
+  header section#navbar .nav-wrapper.active ul {
+    transform: translateX(0px);
+  }
+  header section#navbar .main-ul-li:hover .listing-ul {
+    display: block;
+    animation: none;
+  }
+  header section#navbar .main-ul-li:hover .listing-ul .listing-ul-li:hover .for-sale {
+    display: block;
+    animation: none;
+  }
+  header section#navbar .main-ul-li {
+    padding: 15px 0px;
+    position: static;
+  }
+  header section#navbar .main-ul-li .listing-ul {
+    display: none;
+  }
+}
+
 header section#advanced-search {
   background-color: #131516;
   background-color: #131516;
   position: absolute;
-  top: 400px;
+  top: 500px;
   left: 40px;
   right: 40px;
   z-index: 99;
-  padding: 30px 40px 100px;
+  padding: 0px 40px;
 }
 
 @media (max-width: 992px) {
@@ -451,15 +575,43 @@ header section#advanced-search {
     position: static;
     padding-top: 0px;
   }
+  header section#advanced-search .hide,
+  header section#advanced-search .btn-wrapper {
+    display: none;
+  }
 }
 
 header section#advanced-search p {
   color: #c7c0c0;
 }
 
+header section#advanced-search .respo {
+  display: none;
+  padding: 13px 25px;
+  color: white;
+  background-color: #d1a570;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+header section#advanced-search .respo:hover {
+  background-color: #e66e46;
+}
+
+@media (max-width: 992px) {
+  header section#advanced-search .respo {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+  }
+}
+
 header section#advanced-search .btn-wrapper {
   height: 100%;
   text-align: center;
+  display: flex;
+  align-items: center;
 }
 
 header section#advanced-search .btn-wrapper .btn-custom {
@@ -479,6 +631,7 @@ header section#advanced-search .btn-wrapper .btn-custom:hover {
 @media (max-width: 992px) {
   header section#advanced-search .btn-wrapper {
     margin-top: 15px;
+    display: none;
   }
 }
 
@@ -530,7 +683,7 @@ header section#advanced-search .keyword input {
   header section#advanced-search .keyword input {
     margin-top: 20px;
     background-color: whitesmoke;
-    padding: 10px 20px;
+    padding: 10px 40px;
     border-radius: 4px;
   }
 }
@@ -541,7 +694,7 @@ header section#advanced-search .keyword input::placeholder {
   font-size: 14px;
 }
 
-header section#advanced-search .keyword i {
+header section#advanced-search .keyword i.fa-search {
   position: absolute;
   right: 20px;
   bottom: 8px;
@@ -549,15 +702,31 @@ header section#advanced-search .keyword i {
 }
 
 @media (max-width: 992px) {
-  header section#advanced-search .keyword i {
+  header section#advanced-search .keyword i.fa-search {
+    color: gray;
+    bottom: 15px;
+  }
+}
+
+header section#advanced-search .keyword i.fa-cog {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  header section#advanced-search .keyword i.fa-cog {
+    display: block;
     color: gray;
     bottom: 10px;
+    position: absolute;
+    left: 10px;
+    bottom: 15px;
+    color: gray;
   }
 }
 
 header section#advanced-search .status p {
   margin-bottom: 0px;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 @media (max-width: 992px) {
@@ -594,20 +763,12 @@ header section#advanced-search .select2-container--default
 }
 
 header section#advanced-search .range {
-  width: 100%;
-  appearance: none;
-  height: 4px;
-  margin: 10px;
-}
-
-header section#advanced-search .range::-ms-thumb {
-  background: #d1a570;
+  width: 300px;
+  margin: 0px;
 }
 
 header section#advanced-search .other-features {
   color: white;
-  margin-left: 20px;
-  margin-top: 30px;
 }
 
 header section#advanced-search .other-features i {

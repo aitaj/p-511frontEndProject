@@ -255,9 +255,3 @@ body {
     transform: translateY(0px);
   }
 }
-header section#advanced-search{
-  display: none;
-  @include mq-tablet{
-    display: block;
-  }
-}

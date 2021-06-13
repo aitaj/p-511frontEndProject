@@ -2,6 +2,9 @@ header {
   z-index: 333;
   background-color: $dark-cl;
   section#navbar {
+    @include mq-tablet {
+      display: none;
+    }
     .navbar-wrapper-all {
       display: flex;
       justify-content: space-between;
@@ -15,27 +18,10 @@ header {
         width: 140px;
       }
     }
-    .nav-bar-icon {
-      display: none;
-      @include mq-tablet {
-        display: block;
-        color: white;
-      }
-    }
+
     .nav-main-ul {
       display: flex;
 
-      &::after {
-        opacity: 0;
-      }
-      li {
-        &.search {
-          display: none;
-          @include mq-tablet {
-            display: block;
-          }
-        }
-      }
       li.main-ul-li {
         position: relative;
         margin-left: 35px;
@@ -69,6 +55,9 @@ header {
           li {
             position: relative;
             padding: 5px 25px 0px;
+            @include mq-tablet {
+              display: none;
+            }
             &:last-child {
               padding-bottom: 15px;
             }
@@ -127,58 +116,7 @@ header {
         }
       }
     }
-    .nav-wrapper {
-      @include mq-tablet {
-        ul {
-          display: none;
-          transform: translateX(0%);
-          transition: all 1s;
-        }
-        &.active {
-          ul {
-            display: flex;
-            transform: translateX(-100%);
-            transition: all 1s;
-            width: 300px;
-            flex-direction: column;
-            position: absolute;
-            left: 0px;
-            top: 0px;
-            background-color: black;
-            z-index: 30;
-            animation-name: smooth-nav;
-            animation-duration: 1s;
-            li {
-              padding: 20px 0px;
-              margin-left: 25px;
-              &::after {
-                width: 0px;
-              }
-              a {
-                color: rgb(194, 190, 190);
-                text-transform: uppercase;
-                font-weight: 600;
-              }
-              &:first-child {
-                display: block;
-                padding: 23px;
-                margin: 0px;
-                input {
-                  background-color: rgb(25, 24, 24);
-                  width: 100%;
-                  height: 40px;
-                  border: none;
-                  &::placeholder {
-                    padding-left: 20px;
-                  }
-                }
-                background-color: rgb(68, 65, 65);
-              }
-            }
-          }
-        }
-      }
-    }
+
     .sign-in {
       @include mq-tablet {
         display: none;
@@ -310,6 +248,11 @@ header {
         display: block;
         animation-name: smooth-dropdown;
         animation-duration: 0.6s;
+        li {
+          @include mq-tablet {
+            display: none;
+          }
+        }
         .for-sale {
           display: none;
         }
@@ -324,13 +267,92 @@ header {
         }
       }
     }
-
-
-    .listing-ul-li{
-      display: flex;
-      justify-content: space-between;
-      @include mq-tablet{
+  }
+  section#navbar-mobile {
+    display: none;
+    position: relative;
+    z-index: 3;
+    @include mq-tablet {
+      display: block;
+      height: 50px;
+      a {
+        text-transform: uppercase;
+      }
+      .logo-icon {
+        padding: 20px;
+      }
+      .nav-bar-icon {
+        color: white;
+        z-index: 4;
+      }
+      .logo {
+        img {
+          width: 140px;
+        }
+      }
+      .sidebar-custom {
+        position: absolute;
+        background-color: black;
+        top: 0px;
+        left: -252px;
+      }
+      .nav-layer {
+        background-color: rgba(37, 37, 54, 0.6);
+        width: 100%;
+        height: 900px;
         display: none;
+        margin-top: -60px;
+      }
+      .search-nav {
+        display: block;
+        padding: 23px;
+        margin: 0px;
+        input {
+          background-color: rgb(25, 24, 24);
+          width: 100%;
+          height: 40px;
+          border: none;
+          &::placeholder {
+            padding-left: 20px;
+          }
+        }
+        background-color: rgb(68, 65, 65);
+      }
+      ul {
+        padding: 0px;
+        margin: 0px;
+        a {
+          padding: 20px;
+          display: inline-block;
+        }
+      }
+      .main-ul-li {
+        a {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+        }
+        .listing-ul {
+          display: none;
+          a {
+            background-color: rgb(47, 46, 46);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            text-transform: capitalize;
+          }
+        }
+      }
+      .listing-ul-li {
+        .for-sale {
+          display: none;
+          li {
+            a {
+              background-color: rgb(81, 79, 79);
+              width: 100%;
+            }
+          }
+        }
       }
     }
   }
@@ -345,9 +367,9 @@ header {
     padding: 0px 40px;
     display: block;
     @include mq-tablet {
+      display: none;
       position: static;
       padding-top: 0px;
-
       .hide,
       .btn-wrapper {
         display: none;
@@ -399,7 +421,182 @@ header {
         font-size: 20px;
       }
     }
+    .advanced-items {
+      display: none;
+    }
+    .keyword {
+      position: relative;
+      p {
+        font-weight: 500;
+        @include mq-tablet {
+          display: none;
+        }
+      }
+      input {
+        background-color: transparent;
+        border: none;
+        width: 100%;
+        border-bottom: 1px solid $gray-cl;
 
+        @include mq-tablet {
+          margin-top: 20px;
+          background-color: whitesmoke;
+          padding: 10px 40px;
+          border-radius: 4px;
+        }
+        &::placeholder {
+          color: $gray-cl;
+          font-weight: 600;
+          font-size: 14px;
+        }
+      }
+      i.fa-search {
+        position: absolute;
+        right: 20px;
+        bottom: 8px;
+        color: white;
+        @include mq-tablet {
+          color: gray;
+          bottom: 15px;
+        }
+      }
+      i.fa-cog {
+        display: none;
+        @include mq-tablet {
+          display: block;
+          color: gray;
+          bottom: 10px;
+          position: absolute;
+          left: 10px;
+          bottom: 15px;
+          color: gray;
+        }
+      }
+    }
+
+    .status {
+      p {
+        margin-bottom: 0px;
+        margin-left: 10px;
+        @include mq-tablet {
+          display: none;
+        }
+      }
+    }
+    .select2-container--default .select2-selection--single {
+      background-color: transparent;
+      @include mq-tablet {
+        background-color: whitesmoke;
+      }
+    }
+    .select2-container--default
+      .select2-selection--single
+      .select2-selection__rendered {
+      background-color: transparent;
+      color: white;
+      @include mq-tablet {
+        background-color: whitesmoke;
+        color: gray;
+        border-radius: 4px;
+      }
+    }
+    .range {
+      width: 300px;
+      margin: 0px;
+    }
+    .other-features {
+      color: white;
+      i {
+        color: $main-cl;
+      }
+      h5 {
+        font-size: 15px;
+        margin: 5px 5px 0px;
+        margin-bottom: 0px;
+        margin-top: 5px;
+        transition: all 0.3s;
+        &:hover {
+          color: $main-cl;
+        }
+      }
+    }
+    .checkbox {
+      color: rgb(182, 175, 175);
+      label {
+        font-size: 14px;
+      }
+
+    }
+  }
+  section#advanced-search-mobile {
+    background-color: $dark-cl;
+    background-color: #131516;
+    position: absolute;
+    top: 500px;
+    left: 40px;
+    right: 40px;
+    z-index: 99;
+    padding: 0px 40px;
+    display: none;
+    position: static;
+    padding-top: 0px;
+    display: none;
+    @include mq-tablet{
+      display: block;
+    }
+    .btn-wrapper {
+      display: none;
+    }
+    p {
+      color: rgb(199, 192, 192);
+    }
+    .respo {
+      display: none;
+      @include btn;
+      @include mq-tablet {
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+        text-align: center;
+      }
+    }
+    .btn-wrapper {
+      height: 100%;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      .btn-custom {
+        @include btn;
+        width: 100%;
+        padding: 15px 20px;
+      }
+
+      @include mq-tablet {
+        margin-top: 15px;
+        display: none;
+      }
+    }
+    .advanced {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      height: 100%;
+      @include mq-tablet {
+        display: none;
+      }
+      h5 {
+        color: rgb(199, 192, 192);
+        font-size: 17px;
+      }
+      span {
+        color: $main-cl;
+        font-size: 20px;
+      }
+    }
+.advanced-items-mobile,
+.other-features-mobile{
+  display: none;
+}
     .keyword {
       position: relative;
       p {
@@ -520,20 +717,36 @@ header {
     opacity: 0.4;
   }
 }
-@keyframes smooth-nav {
+@keyframes smooth-nav-mobile {
   0% {
-    transform: translateX(-200%);
+    height: 0px;
   }
   100% {
-    transform: translateX(-100%);
+    height: 100%;
   }
 }
-@keyframes smooth-main {
+@keyframes smooth-main-open {
   0% {
     transform: translateX(0px);
   }
   100% {
-    transform: translateX(300px);
+    transform: translateX(252px);
+  }
+}
+@keyframes smooth-main-close {
+  0% {
+    transform: translateX(252px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes smooth-sidebar-close {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-252px);
   }
 }
 @keyframes smooth-dropdown {
@@ -542,13 +755,5 @@ header {
   }
   100% {
     transform: translateY(0px);
-  }
-}
-
-//for hiding advance-search in other pages
-.hide-advance {
-  opacity: 0;
-  @include mq-tablet {
-    opacity: 1;
   }
 }

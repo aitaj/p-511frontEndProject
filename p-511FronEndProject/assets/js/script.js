@@ -34,63 +34,89 @@ registBtn.forEach((item) => {
 //opening responsive navbar
 
 let barIcon = document.querySelector(".nav-bar-icon");
-let navWrapper = document.querySelector(".nav-main-ul");
-let main = document.querySelector("main");
-let header = document.querySelector("header");
+let mainUlLi = document.querySelectorAll(".main-ul-li");
+let listingUlLi = document.querySelectorAll(".listing-ul-li");
+let body = document.querySelector("body");
+let sidebar = document.querySelector(".sidebar-custom");
+let sidebarItems = document.querySelectorAll(".sidebar-custom a");
+let navLayer = document.querySelector(".nav-layer");
 barIcon.addEventListener("click", function (e) {
-  navWrapper.style.height = `${window.screen.height}px`;
-  navWrapper.parentNode.classList.toggle("active");
-  if (navWrapper.parentNode.classList.contains("active")) {
-    main.style.transform = `translateX(${navWrapper.offsetWidth}px)`;
-    header.style.transform = `translateX(${navWrapper.offsetWidth}px)`;
-    navWrapper.style.transform = `translateX(-${navWrapper.offsetWidth}px)`;
-    main.style.animationName = "smooth-main";
-    main.style.animationDuration = "2s";
-    header.style.animationName = "smooth-main";
-    header.style.animationDuration = "2s";
-  } else {
-    main.style.transform = `translateX(${0}px)`;
-    header.style.transform = `translateX(${0}px)`;
+  sidebar.style.height = `${screen.height}px`;
+  sidebar.style.transform = `translateX(${0}px)`;
+  sidebar.style.animation = `none`;
+  body.style.transform = `translateX(${250}px)`;
+  body.style.animationName = "smooth-main-open";
+  body.style.animationDuration = `${0.7}s`;
+  navLayer.style.display = "block";
+  navLayer.style.opacity = "0.6";
+  navLayer.style.animationName = "smooth-opacity";
+  navLayer.style.height = `${screen.height}px`;
+  navLayer.style.animationDuration = `${0.6}s`;
+});
+window.addEventListener("click", function (e) {
+  if (e.target.classList.contains("nav-layer")) {
+    sidebar.style.transform = `translateX(${-250}px)`;
+    sidebar.style.animationName = "smooth-sidebar-close";
+    sidebar.style.animationDuration = `${2.9}s`;
+    body.style.transform = `translateX(${0}px)`;
+    navLayer.style.display = "none";
+    navLayer.style.opacity = "0";
+    body.style.animationName = "smooth-main-close";
+    body.style.animationDuration = `${0.7}s`;
+    body.style.overflow = `${0.7}s`;
   }
+});
+$(document).ready(function () {
+  $(mainUlLi).each(function (index) {
+    $(this).on("click", function () {
+      $(this).children(".listing-ul").slideToggle();
+      $(this).siblings().children(".listing-ul").slideUp();
+    });
+  });
+  $(listingUlLi).each(function (index) {
+    $(this).on("click", function (e) {
+      e.stopPropagation();
+      $(this).children("ul").slideToggle();
+      $(this).siblings().children("ul").slideUp();
+    });
+  });
 });
 
 //advanced-features
 
-let advancedBtn = document.querySelector("#advanced-search .advance-open");
-let advanceSection = document.querySelector("#advanced-search .advanced-items");
+$(document).ready(function () {
+  let advancedBtn = document.querySelector("#advanced-search .advance-open");
+  let advanceItems = document.querySelector("#advanced-search .advanced-items");
 
-advancedBtn.addEventListener("click", function () {
-  advanceSection.classList.toggle("d-none");
-  if (!advanceSection.classList.contains("d-none")) {
-    document.querySelector("#advanced-search").style.paddingBottom = "50px";
+  let otherFeaturesBtn = document.querySelector(
+    "#advanced-search .other-features-btn"
+  );
+  let otherFeaturesSection = document.querySelector(
+    "#advanced-search .other-feature-items"
+  );
+  $(advancedBtn).on("click", function (e) {
+    $(advanceItems).slideToggle();
+    document.querySelector("#advanced-search").style.paddingBottom = "20px";
     this.children[0].classList.replace("fa-plus-circle", "fa-minus-circle");
-  } else {
-    document.querySelector("#advanced-search").style.paddingBottom = "0px";
-    this.children[0].classList.replace("fa-minus-circle", "fa-plus-circle");
-  }
-});
-let otherFeaturesBtn = document.querySelector(
-  "#advanced-search .other-features-btn"
-);
-let otherFeaturesSection = document.querySelector(
-  "#advanced-search .other-feature-items"
-);
-otherFeaturesBtn.addEventListener("click", function () {
-  otherFeaturesSection.classList.toggle("d-none");
+  });
+  $(otherFeaturesBtn).on("click", function () {
+    $(otherFeaturesSection).slideToggle();
+  });
 });
 
-//advanced features responsive
 
-let settingBtn = document.querySelector(".keyword .fa-cog");
 
-settingBtn.addEventListener("click", function () {
-  advanceSection.classList.toggle("d-none");
-  if (!advanceSection.classList.contains("d-none")) {
-    document.querySelector("#advanced-search").style.paddingBottom = "50px";
-  } else {
-    document.querySelector("#advanced-search").style.paddingBottom = "0px";
-  }
-});
+//advanced features mobile
+
+let settingBtn = document.querySelector("#advanced-search-mobile .keyword .fa-cog");
+let otherFeaturesBtn=document.querySelector("#advanced-search-mobile .other-features-btn")
+$(settingBtn).click(function () {
+  $("#advanced-search-mobile .advanced-items-mobile" ).slideToggle();
+ })
+ $(otherFeaturesBtn).click(function () {
+  $("#advanced-search-mobile .other-features-mobile" ).slideToggle();
+ })
+
 
 //#house-in,#latest-properties layer
 

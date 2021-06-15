@@ -1,27 +1,11 @@
-let sideInfo = document.querySelector("#contact .side-info");
-window.addEventListener("scroll", function (e) {
-  console.log(window.scrollY)
-  if (window.scrollY > 923&&window.scrollY < 1012 ) {
-    sideInfo.style.position = "fixed";
-    sideInfo.style.bottom = "0";
-    sideInfo.style.width = `${sideInfo.parentNode.offsetWidth}px`;
-  } 
-  else if(window.scrollY >= 1012 ){
-    sideInfo.style.position = "absolute";
-    sideInfo.style.bottom = "0";
-  }
-  else{
-    sideInfo.style.position = "static";
-  }
-});
+"use strict";
 
-
-
-//contact page form
+//contact page form started
 
 let contactForm = document.querySelector("#contact .contact-form");
 let errorBox = document.querySelector("#contact .error-message");
-const regexEmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+const regexEmail =
+  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 const regexNumbers = /^[0-9]*$/;
 const regexLetter = /^[a-zA-Z\s]*$/;
 
@@ -76,13 +60,12 @@ function checkInputs() {
     successCounter++;
     setSuccess(textArea);
   }
-//checking if all area success
+  //checking if all area success
   if (successCounter < 5) {
     errorBox.classList.remove("d-none");
     errorBox.innerHTML =
       "One or more fields have an error. Please check and try again.";
-  }
-  else{
+  } else {
     errorBox.classList.remove("d-none");
     errorBox.innerHTML = "Success";
   }

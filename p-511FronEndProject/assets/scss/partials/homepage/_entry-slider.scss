@@ -34,8 +34,9 @@ cursor: pointer;
     }
   }
   .item-wrapper {
-    background-image: url(https://demo1-homeid.g5plus.net/wp-content/uploads/2020/10/single-property-43.jpg);
+    background-image: url(https://demo1-homeid.g5plus.net/wp-content/uploads/2020/10/demo1-single-property-01.jpg);
     padding: 100px;
+    background-position: center;
     @include mq-tablet {
       padding: 200px 20px 200px 150px;
     }

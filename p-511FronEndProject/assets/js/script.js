@@ -1,6 +1,35 @@
-//navbar started
+//home page started
+//fixed-btn common
 
-//hiding navbar
+let btnFixed = document.querySelector(".sticky-btn");
+
+const scrollFunc = () => {
+  let y = window.scrollY;
+
+  if (y > 230) {
+    btnFixed.className = "active sticky-btn";
+  } else {
+    btnFixed.className = "hide sticky-btn";
+  }
+};
+
+window.addEventListener("scroll", scrollFunc);
+
+const scrollToTop = () => {
+  const c = document.documentElement.scrollTop || document.body.scrollTop;
+
+  if (c > 0) {
+    window.requestAnimationFrame(scrollToTop);
+    window.scrollTo(0, c - c / 10);
+  }
+};
+btnFixed.onclick = function (e) {
+  e.preventDefault();
+  scrollToTop();
+};
+
+//sign in & register
+
 let logInBtnNav = document.querySelector("#navbar .sign-in-btn");
 let closeLoginBtns = document.querySelectorAll(".pop-up .fa-times");
 let logInBtn = document.querySelectorAll(".pop-up .log-in");
@@ -8,12 +37,27 @@ let registBtn = document.querySelectorAll(".pop-up .register");
 logInBtnNav.addEventListener("click", function () {
   document.querySelector("#navbar .pop-up").classList.remove("d-none");
   document.querySelector("#navbar .log-in-wrapper").classList.remove("d-none");
+
+  document.querySelector("#navbar .pop-up").style.height = `${screen.height}px`;
+  document.body.style.overflow = "hidden";
 });
 closeLoginBtns.forEach((item) => {
   item.addEventListener("click", function () {
     document.querySelector("#navbar .pop-up").classList.add("d-none");
+    document.body.style.overflow = "hidden";
   });
 });
+document
+  .querySelector("#navbar .pop-up")
+  .addEventListener("click", function (e) {
+    if (
+      e.target.classList.contains("pop-up") ||
+      e.target.parentNode.classList.contains("pop-up")
+    ) {
+      document.querySelector("#navbar .pop-up").classList.add("d-none");
+      document.body.style.overflow = "hidden";
+    }
+  });
 logInBtn.forEach((item) => {
   item.addEventListener("click", function () {
     document
@@ -31,6 +75,7 @@ registBtn.forEach((item) => {
   });
 });
 
+//navbar started
 //opening responsive navbar
 
 let barIcon = document.querySelector(".nav-bar-icon");
@@ -52,20 +97,26 @@ barIcon.addEventListener("click", function (e) {
   navLayer.style.animationName = "smooth-opacity";
   navLayer.style.height = `${screen.height}px`;
   navLayer.style.animationDuration = `${0.6}s`;
+  document.body.style.overflow = "hidden";
+  document.body.style.height = `${screen.height}px`;
 });
-window.addEventListener("click", function (e) {
-  if (e.target.classList.contains("nav-layer")) {
-    sidebar.style.transform = `translateX(${-250}px)`;
-    sidebar.style.animationName = "smooth-sidebar-close";
-    sidebar.style.animationDuration = `${2.9}s`;
-    body.style.transform = `translateX(${0}px)`;
-    navLayer.style.display = "none";
-    navLayer.style.opacity = "0";
-    body.style.animationName = "smooth-main-close";
-    body.style.animationDuration = `${0.7}s`;
-    body.style.overflow = `${0.7}s`;
-  }
+//closing respo navbar
+
+navLayer.addEventListener("click", function (e) {
+  sidebar.style.transform = `translateX(${-250}px)`;
+  sidebar.style.animationName = "smooth-sidebar-close";
+  sidebar.style.animationDuration = `${2.9}s`;
+  body.style.transform = `translateX(${0}px)`;
+  navLayer.style.display = "none";
+  navLayer.style.opacity = "0";
+  document.body.style.overflow = "auto";
+  document.body.style.height = `fit-content`;
+  //   body.style.animationName = "smooth-main-close";
+  //   body.style.animationDuration = `${0.7}s`;
+  // document.body.style.width = `${screen.width}px`;
 });
+
+//respo-navbar li & ul
 $(document).ready(function () {
   $(mainUlLi).each(function (index) {
     $(this).on("click", function () {
@@ -82,7 +133,7 @@ $(document).ready(function () {
   });
 });
 
-//advanced-features
+//advanced-search
 
 $(document).ready(function () {
   let advancedBtn = document.querySelector("#advanced-search .advance-open");
@@ -104,19 +155,20 @@ $(document).ready(function () {
   });
 });
 
+//advanced-search mobile
 
-
-//advanced features mobile
-
-let settingBtn = document.querySelector("#advanced-search-mobile .keyword .fa-cog");
-let otherFeaturesBtn=document.querySelector("#advanced-search-mobile .other-features-btn")
+let settingBtn = document.querySelector(
+  "#advanced-search-mobile .keyword .fa-cog"
+);
+let otherFeaturesBtn = document.querySelector(
+  "#advanced-search-mobile .other-features-btn"
+);
 $(settingBtn).click(function () {
-  $("#advanced-search-mobile .advanced-items-mobile" ).slideToggle();
- })
- $(otherFeaturesBtn).click(function () {
-  $("#advanced-search-mobile .other-features-mobile" ).slideToggle();
- })
-
+  $("#advanced-search-mobile .advanced-items-mobile").slideToggle();
+});
+$(otherFeaturesBtn).click(function () {
+  $("#advanced-search-mobile .other-features-mobile").slideToggle();
+});
 
 //#house-in,#latest-properties layer
 
@@ -302,100 +354,7 @@ $(document).ready(function () {
   });
 });
 
-//fixed-btn common
-
-let btnFixed = document.querySelector(".sticky-btn");
-
-const scrollFunc = () => {
-  let y = window.scrollY;
-
-  if (y > 230) {
-    btnFixed.className = "active sticky-btn";
-  } else {
-    btnFixed.className = "hide sticky-btn";
-  }
-};
-
-window.addEventListener("scroll", scrollFunc);
-
-const scrollToTop = () => {
-  const c = document.documentElement.scrollTop || document.body.scrollTop;
-
-  if (c > 0) {
-    window.requestAnimationFrame(scrollToTop);
-    window.scrollTo(0, c - c / 10);
-  }
-};
-btnFixed.onclick = function (e) {
-  e.preventDefault();
-  scrollToTop();
-};
-
-//agent section api
-
-const url = "https://json-fake-api.herokuapp.com/agents";
-
-async function getAgents() {
-  const result = await fetch(url);
-
-  const data = await result.json();
-
-  const html = data.map((item) => {
-    return `
-           <div class="custom-card">
-                  <div class="custom-card-header text-center">
-                    <div class="img-wrapper">
-                      <img
-                        src="${item.image}"
-                        alt=""
-                      />
-                    </div>
-                    <h5>${item.name}</h5>
-                    <p>${item.job}</p>
-
-                    <div class="star">
-                      <i class="fas fa-star"></i><i class="fas fa-star"></i
-                      ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                      ><i class="fas fa-star"></i>
-                    </div>
-                  </div>
-                  <div class="custom-card-body">
-                    <ul>
-                      <li>
-                        <p>Office</p>
-                        <span>${item.office_phone}</span>
-                      </li>
-                      <li>
-                        <p>Mobile</p>
-                        <span>${item.phone}</span>
-                      </li>
-                      <li>
-                        <p>Fax</p>
-                        <span>+98 0900 098 888</span>
-                      </li>
-                      <li>
-                        <p>Email</p>
-                        <span>${item.email}</span>
-                      </li>
-                      <li>
-                        <p>Social</p>
-                        <div class="social d-inline-block">
-                          <span><i class="fab fa-facebook-f"></i></span>
-                          <span><i class="fab fa-twitter"></i></span>
-                          <span><i class="fab fa-linkedin-in"></i></span>
-                          <span><i class="fab fa-instagram"></i></span>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-    `;
-  });
-
-  document.querySelector("#agents .agent-cards").innerHTML = html.join("");
-}
-
-getAgents();
+//customizing select2 dropdowns
 
 $(document).ready(function () {
   //agents section
@@ -435,12 +394,9 @@ leaders.forEach((item) => {
   item.addEventListener("mouseenter", function (e) {
     this.classList.add("active");
     this.classList.remove("hide");
-    console.log("test");
   });
   item.addEventListener("mouseleave", function (e) {
     this.classList.remove("active");
     this.classList.add("hide");
   });
 });
-
-//

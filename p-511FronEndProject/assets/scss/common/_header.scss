@@ -148,7 +148,7 @@ header {
 
     .pop-up {
       background-color: rgba(28, 6, 76, 0.25);
-      height: 600px;
+      animation-name: smooth-opacity;
       position: absolute;
       left: 0px;
       top: 0px;
@@ -381,12 +381,6 @@ header {
     .respo {
       display: none;
       @include btn;
-      @include mq-tablet {
-        display: block;
-        width: 100%;
-        margin-top: 20px;
-        text-align: center;
-      }
     }
     .btn-wrapper {
       height: 100%;
@@ -398,20 +392,13 @@ header {
         width: 100%;
         padding: 15px 20px;
       }
-
-      @include mq-tablet {
-        margin-top: 15px;
-        display: none;
-      }
     }
     .advanced {
       display: flex;
       align-items: center;
       justify-content: space-evenly;
       height: 100%;
-      @include mq-tablet {
-        display: none;
-      }
+
       h5 {
         color: rgb(199, 192, 192);
         font-size: 17px;
@@ -428,9 +415,6 @@ header {
       position: relative;
       p {
         font-weight: 500;
-        @include mq-tablet {
-          display: none;
-        }
       }
       input {
         background-color: transparent;
@@ -438,12 +422,6 @@ header {
         width: 100%;
         border-bottom: 1px solid $gray-cl;
 
-        @include mq-tablet {
-          margin-top: 20px;
-          background-color: whitesmoke;
-          padding: 10px 40px;
-          border-radius: 4px;
-        }
         &::placeholder {
           color: $gray-cl;
           font-weight: 600;
@@ -455,22 +433,6 @@ header {
         right: 20px;
         bottom: 8px;
         color: white;
-        @include mq-tablet {
-          color: gray;
-          bottom: 15px;
-        }
-      }
-      i.fa-cog {
-        display: none;
-        @include mq-tablet {
-          display: block;
-          color: gray;
-          bottom: 10px;
-          position: absolute;
-          left: 10px;
-          bottom: 15px;
-          color: gray;
-        }
       }
     }
 
@@ -478,9 +440,6 @@ header {
       p {
         margin-bottom: 0px;
         margin-left: 10px;
-        @include mq-tablet {
-          display: none;
-        }
       }
     }
     .select2-container--default .select2-selection--single {
@@ -525,7 +484,6 @@ header {
       label {
         font-size: 14px;
       }
-
     }
   }
   section#advanced-search-mobile {
@@ -541,7 +499,7 @@ header {
     position: static;
     padding-top: 0px;
     display: none;
-    @include mq-tablet{
+    @include mq-tablet {
       display: block;
     }
     .btn-wrapper {
@@ -553,70 +511,27 @@ header {
     .respo {
       display: none;
       @include btn;
-      @include mq-tablet {
-        display: block;
-        width: 100%;
-        margin-top: 20px;
-        text-align: center;
-      }
-    }
-    .btn-wrapper {
-      height: 100%;
+      display: block;
+      width: 100%;
+      margin-top: 20px;
       text-align: center;
-      display: flex;
-      align-items: center;
-      .btn-custom {
-        @include btn;
-        width: 100%;
-        padding: 15px 20px;
-      }
+    }
 
-      @include mq-tablet {
-        margin-top: 15px;
-        display: none;
-      }
+    .advanced-items-mobile,
+    .other-features-mobile {
+      display: none;
     }
-    .advanced {
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-      height: 100%;
-      @include mq-tablet {
-        display: none;
-      }
-      h5 {
-        color: rgb(199, 192, 192);
-        font-size: 17px;
-      }
-      span {
-        color: $main-cl;
-        font-size: 20px;
-      }
-    }
-.advanced-items-mobile,
-.other-features-mobile{
-  display: none;
-}
     .keyword {
       position: relative;
-      p {
-        font-weight: 500;
-        @include mq-tablet {
-          display: none;
-        }
-      }
       input {
         background-color: transparent;
         border: none;
         width: 100%;
         border-bottom: 1px solid $gray-cl;
-
-        @include mq-tablet {
-          margin-top: 20px;
-          background-color: whitesmoke;
-          padding: 10px 40px;
-          border-radius: 4px;
-        }
+        margin-top: 20px;
+        background-color: whitesmoke;
+        padding: 10px 40px;
+        border-radius: 4px;
         &::placeholder {
           color: $gray-cl;
           font-weight: 600;
@@ -626,34 +541,23 @@ header {
       i.fa-search {
         position: absolute;
         right: 20px;
-        bottom: 8px;
-        color: white;
-        @include mq-tablet {
-          color: gray;
-          bottom: 15px;
-        }
+        color: gray;
+        bottom: 15px;
       }
       i.fa-cog {
-        display: none;
-        @include mq-tablet {
-          display: block;
-          color: gray;
-          bottom: 10px;
-          position: absolute;
-          left: 10px;
-          bottom: 15px;
-          color: gray;
-        }
+        display: block;
+        color: gray;
+        bottom: 10px;
+        position: absolute;
+        left: 10px;
+        bottom: 15px;
+        color: gray;
       }
     }
 
     .status {
       p {
-        margin-bottom: 0px;
-        margin-left: 10px;
-        @include mq-tablet {
-          display: none;
-        }
+        display: none;
       }
     }
     .select2-container--default .select2-selection--single {
